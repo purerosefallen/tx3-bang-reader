@@ -9,6 +9,7 @@
 	"compileOnSave": true,
 	"allowJs": true,
 	"include": [
-		"*.ts"
+		"src/*.ts",
+		"tests/*.ts"
 	]
 }
