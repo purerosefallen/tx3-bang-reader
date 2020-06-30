@@ -1,0 +1,32 @@
+{
+  "name": "tx3-bang-reader",
+  "version": "1.0.0",
+  "description": "Read TX3 bang and parse it",
+  "main": "build/run.js",
+  "scripts": {
+    "build": "./node_modules/.bin/tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/purerosefallen/tx3-bang-reader.git"
+  },
+  "keywords": [
+    "tx3"
+  ],
+  "author": "Nanahira",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/purerosefallen/tx3-bang-reader/issues"
+  },
+  "homepage": "https://github.com/purerosefallen/tx3-bang-reader#readme",
+  "dependencies": {
+    "@types/node": "^14.0.14",
+    "@types/underscore": "^1.10.2",
+    "axios": "^0.19.2",
+    "domhandler": "^3.0.0",
+    "htmlparser2": "^4.1.0",
+    "posthtml-parser": "^0.4.2",
+    "typescript": "^3.9.5",
+    "underscore": "^1.10.2"
+  }
+}
