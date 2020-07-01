@@ -52,9 +52,9 @@ export class ProxyFetcher {
 				})).data;
 				return data;
 			} catch (e) {
-				if (!process.env.NO_PROXY) {
+				/*if (!process.env.NO_PROXY) {
 					this.proxies.splice(proxyIndex, 1);
-				}
+				}*/
 				console.error(`Failed fetching data from ${url}: ${e.toString()}`)
 			}
 		}
