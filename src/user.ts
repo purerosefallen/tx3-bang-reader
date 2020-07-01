@@ -72,7 +72,7 @@ function getNumber(node: HTML.Node) {
 	} else if (stringMatch = numberStr.match(/^([天地])魂$/)) {
 		return stringMatch[1] === "天" ? 2 : 1;
 	} else if (stringMatch = numberStr.match(/^(.+)天(.+)境界$/)) {
-		return (_.findIndex(chineseCapitalNumbers, (m) => m === stringMatch[1]) << 4) | _.findIndex(chineseCapitalNumbers, (m) => m === stringMatch[2]);
+		return (_.findIndex(chineseCapitalNumbers, (m) => m === stringMatch[1]) << 8) | _.findIndex(chineseCapitalNumbers, (m) => m === stringMatch[2]);
 	} else if (stringMatch = numberStr.match(/^(\d+)-(\d+)$/)) {
 		const minValue = parseInt(stringMatch[1]);
 		const maxValue = parseInt(stringMatch[2]);
@@ -83,7 +83,7 @@ function getNumber(node: HTML.Node) {
 }
 
 interface AttackAttribute {
-	'攻力': number,
+	'攻力': number, //大攻取前2字节int16，小攻取后2字节int16，法力也是这样
 	'命中': number,
 	'法力': number,
 	'重击': number,
@@ -128,8 +128,8 @@ export class User {
 	scoreRank: number
 	scoreLocalRank: number;
 	scoreCategoryRank: number;
-	sqStage: number;
-	sqLevel: number;
+	sqStage: number; // 天魂：2，地魂：1，没有神启：null
+	sqLevel: number; // 前4位是几境界，后四位是几天
 	qhLevel: number;
 	tlPoints: number;
 	hp: number;
