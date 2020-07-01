@@ -113,7 +113,7 @@ export function getString(node: HTML.Node) {
 export function getNumber(node: HTML.Node) {
 	const numberStr = getString(node);
 	let stringMatch: RegExpMatchArray;
-	if (numberStr === "没有上榜") {
+	if (numberStr === "没有上榜" || !numberStr) {
 		return null;
 	} else if (stringMatch = numberStr.match(/^([天地])魂$/)) {
 		return stringMatch[1] === "天" ? 2 : 1;
