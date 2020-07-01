@@ -1,6 +1,14 @@
 import { Tx3Fetcher, servers } from "./fetcher";
 import fs from "fs";
 import _ from "underscore";
+
+const fetcher = new Tx3Fetcher();
+
+async function runServer(server: string) {
+	const users = await fetcher.fetchUsersFromServer(server);
+	await fs.promises.writeFile(`./output/servers/${server}.json`, JSON.stringify(users, null, 2));
+}
+
 async function main() {
 	try {
 		await fs.promises.access("./output/servers");
@@ -9,11 +17,9 @@ async function main() {
 			recursive: true
 		});
 	}
-	const fetcher = new Tx3Fetcher();
 	await fetcher.initProxies();
-	const fetchResult = await fetcher.fetch();
-	const allUsers = _.flatten(Array.from(fetchResult.values));
-	await fs.promises.writeFile("./output/all.json", JSON.stringify(allUsers, null, 2));
-	await Promise.all(servers.map(server => fs.promises.writeFile(`./output/servers/${server}.json`, JSON.stringify(fetchResult.get(server), null, 2))));
+	for (let server of servers) {
+		await runServer(server);
+	}
 }
 main();
