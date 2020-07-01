@@ -10,7 +10,7 @@ class Tx3Fetcher {
 				responseType: "document"
 			})).data;
 			const parsedContent = parseHTML(content);
-			return new User(id, content);
+			return new User(id, content, null);
 		/*} catch(e) {
 			console.error(`Errored fetching role data from ${id}: ${e.toString()}`);
 			return null;
