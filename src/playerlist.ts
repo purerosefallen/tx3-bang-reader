@@ -33,22 +33,17 @@ function getPlayerRowFromTree(tree: HTML.Tree): PlayerRow {
 	}
 }
 
-export class PlayerList {
-	rows: PlayerRow[];
-	private parseRows(content: string) {
-		this.rows = [];
-		const parsedContent = HTML(content);
-		const tablePos = findNodeIndexByTag(parsedContent, "table", []);
-		const tableTree = getDepthOfTree(parsedContent, tablePos);
-		const playerPoses = findAllNodeIndex(tableTree, (node) => {
-			return typeof (node) !== "string" && node.tag === "tr" && node.attrs.class !== "trTop2";
-		}, []);
-		this.rows = playerPoses.map(pos => {
-			const tree = getDepthOfTree(tableTree, pos);
-			return getPlayerRowFromTree(tree);
-		})
-	}
-	constructor(content: string) {
-		this.parseRows(content);
-	}
+
+
+export function parsePlayerRows(content: string) {
+	const parsedContent = HTML(content);
+	const tablePos = findNodeIndexByTag(parsedContent, "table", []);
+	const tableTree = getDepthOfTree(parsedContent, tablePos);
+	const playerPoses = findAllNodeIndex(tableTree, (node) => {
+		return typeof (node) !== "string" && node.tag === "tr" && node.attrs.class !== "trTop2";
+	}, []);
+	return playerPoses.map(pos => {
+		const tree = getDepthOfTree(tableTree, pos);
+		return getPlayerRowFromTree(tree);
+	});
 }

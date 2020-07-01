@@ -1,11 +1,10 @@
 import { User } from "../src/user";
 import fs from "fs";
-import { PlayerList } from "../src/playerlist";
 
 async function main() {
-	let html = await fs.promises.readFile("./tests/playerlist.html", "utf-8");
-	console.log(new PlayerList(html));
-	html = await fs.promises.readFile("./tests/playerlist-null.html", "utf-8");
-	console.log(new PlayerList(html));
+	let html = await fs.promises.readFile("./tests/28_20588.html", "utf-8");
+	console.log(new User("28_20588", html, null));
+	html = await fs.promises.readFile("./tests/60_46782.html", "utf-8");
+	console.log(new User("60_46782", html, null));
 }
 main();
