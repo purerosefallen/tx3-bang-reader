@@ -4,7 +4,8 @@
   "description": "Read TX3 bang and parse it",
   "main": "build/run.js",
   "scripts": {
-    "build": "./node_modules/.bin/tsc"
+    "build": "./node_modules/.bin/tsc",
+    "test": "node build/tests/test.js"
   },
   "repository": {
     "type": "git",
