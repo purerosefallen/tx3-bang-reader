@@ -5,7 +5,7 @@ import _ from "underscore";
 const fetcher = new Tx3Fetcher();
 
 async function runServer(server: string) {
-	const users = await fetcher.fetchUsersFromServer(server);
+	const users = await fetcher.fetchListFromServer(server);
 	await fs.promises.writeFile(`./output/servers/${server}.json`, JSON.stringify(users, null, 2));
 	return users;
 }

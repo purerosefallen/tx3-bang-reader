@@ -76,6 +76,32 @@ export class Tx3Fetcher {
 		return _.flatten(res);
 	}
 	async fetchUsers(school: number, server: string, page: number): Promise<User[]> {
+		const playerRows = await this.fetchList(school, server, page);
+		return await Promise.all(playerRows.map(row => this.fetchUser(row)));
+	}
+	async fetchListFromServer(server: string): Promise<PlayerRow[]> {
+		console.log(`Fetching user list from server ${server}.`);
+		const resPromises: Promise<PlayerRow[]>[] = [];
+		for (let school = 1; school < 12; ++school) {
+			resPromises.push(this.fetchListFromSchoolAndServer(school, server));
+		}
+		const result = _.flatten(await Promise.all(resPromises));
+		console.log(`Fetched user list with ${result.length} users from server ${server}.`);
+		return result;
+	}
+	async fetchListFromSchoolAndServer(school: number, server: string): Promise<PlayerRow[]> {
+		console.log(`Fetching users from server ${server} with school ${school}.`);
+		const res: PlayerRow[][] = [];
+		for (let page = 1; page <= 25; ++page) {
+			const list = await this.fetchList(school, server, page);
+			if (!list.length) {
+				break;
+			}
+			res.push(list);
+		}
+		return _.flatten(res);
+	}
+	async fetchList(school: number, server: string, page: number): Promise<PlayerRow[]> {
 		console.log(`Fetching user list from server ${server} with school ${school} page ${page}.`);
 		try { 
 			const content: string = await this.proxyFetcher.getWithProxy(`http://bang.tx3.163.com/bang/ranks`, {
@@ -92,7 +118,7 @@ export class Tx3Fetcher {
 				}
 			});
 			const playerRows = parsePlayerRows(content);
-			return await Promise.all(playerRows.map(row => this.fetchUser(row)));
+			return playerRows;
 		} catch(e) {
 			console.error(`Errored fetching user list with params ${school} ${server} ${page}}: ${e.toString()}`);
 			return [];
