@@ -1,5 +1,13 @@
 import axios, { AxiosProxyConfig, AxiosRequestConfig } from "axios";
 
+const proxySourceList = [
+	"http://www.89ip.cn/tqdl.html?api=1&num=9999", "http://www.66ip.cn/mo.php?tqsl=9999"
+]
+
+for (let i = 1; i <= 2000; ++i) {
+	proxySourceList.push(`http://www.xiladaili.com/http/${i}/`);
+}
+
 export class ProxyFetcher {
 	proxies: AxiosProxyConfig[];
 	counter: number;
@@ -11,7 +19,7 @@ export class ProxyFetcher {
 		if (process.env.NO_PROXY) {
 			return;
 		}
-		while (true) {
+		//while (true) {
 			try {
 				const proxyPage: string = (await axios.get(url, {
 					responseType: "document"
@@ -20,17 +28,27 @@ export class ProxyFetcher {
 				for (let proxyString of proxyMatches) {
 					const [host, _port] = proxyString.split(":");
 					const port = parseInt(_port);
-					this.proxies.push({ host, port });
+					const proxy = { host, port };
+					let isProxyUsable = false;
+					try { 
+						await axios.get("http://mirrors.aliyun.com/debian/pool", { proxy });
+						isProxyUsable = true;
+					} catch (e) {
+						console.error(`Proxy ${proxyString} is broken: ${e.toString()}`);
+					}
+					if (isProxyUsable) {
+						this.proxies.push(proxy);
+					}
 				}
 				console.error(`Got ${proxyMatches.length} proxies from ${url}.`);
 				return;
 			} catch (e) {
 				console.error(`Failed fetching proxy list from ${url}: ${e.toString()}`)
 			}
-		}
+		//}
 	}
 	async initProxies() {
-		await Promise.all(["http://www.89ip.cn/tqdl.html?api=1&num=9999", "http://www.66ip.cn/mo.php?tqsl=9999"].map((m) => {
+		await Promise.race(["http://www.89ip.cn/tqdl.html?api=1&num=9999", "http://www.66ip.cn/mo.php?tqsl=9999"].map((m) => {
 			return this.initProxiesFrom(m);
 		}));
 	}
@@ -52,10 +70,10 @@ export class ProxyFetcher {
 				})).data;
 				return data;
 			} catch (e) {
-				/*if (!process.env.NO_PROXY) {
+				if (!process.env.NO_PROXY) {
 					this.proxies.splice(proxyIndex, 1);
-				}*/
-				console.error(`Failed fetching data from ${url}: ${e.toString()}`)
+				}
+				console.error(`Failed fetching data from ${url}: ${e.toString()} ${this.proxies.length} proxies left.`)
 			}
 		}
 	}
