@@ -20,7 +20,7 @@ async function main() {
 	}
 	await fetcher.initProxies();
 	if (process.env.SERVER) {
-		await runServer(process.env.SERVER);
+		await runServer(servers[parseInt(process.env.SERVER)]);
 		return;
 	}
 	const userListWithServer = await Promise.all(servers.map(runServer));
