@@ -1,0 +1,2204 @@
+[
+  "\n\n\n\n",
+  "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">",
+  "\n",
+  {
+    "tag": "html",
+    "attrs": {
+      "xmlns": "http://www.w3.org/1999/xhtml"
+    },
+    "content": [
+      "\n\t",
+      {
+        "tag": "head",
+        "content": [
+          "\n\t\t",
+          {
+            "tag": "meta",
+            "attrs": {
+              "http-equiv": "Content-Type",
+              "content": "text/html; charset=utf-8"
+            }
+          },
+          "\n\t\t",
+          {
+            "tag": "title",
+            "content": [
+              "\n\t\t\t装备评价排行榜 - 《天下3》英雄榜 -《天下3》官方网站—首款全模式3D玄幻网游\n\t\t"
+            ]
+          },
+          "\n\t\t",
+          {
+            "tag": "meta",
+            "attrs": {
+              "name": "keywords",
+              "content": "天下3英雄榜,天下3,英雄榜,天下3官网"
+            }
+          },
+          "\n\t\t",
+          {
+            "tag": "meta",
+            "attrs": {
+              "name": "description",
+              "content": "英雄榜是《天下3》游戏信息查询工具，定时从游戏服务器提取数据，通过网页呈现给用户。英雄榜所有数据来源于真实游戏服务器，展示《天下3》游戏中的全部角色装备信息、角色技能、属性排名等，是权威的官方数据。"
+            }
+          },
+          "\n\t\t",
+          {
+            "tag": "link",
+            "attrs": {
+              "rel": "Shortcut Icon",
+              "type": "image/ico",
+              "href": "http://bang.tx3.163.com/favicon.ico"
+            }
+          },
+          "\n\t\t",
+          {
+            "tag": "link",
+            "attrs": {
+              "rel": "stylesheet",
+              "href": "https://tx3.res.netease.com/pc/qt/20151231153005/css/comv4.css?v=20200610181854"
+            }
+          },
+          "\n\n\t\t\n\t\t\n\t"
+        ]
+      },
+      "\n\t",
+      {
+        "tag": "body",
+        "content": [
+          "\n\t\t",
+          {
+            "tag": "div",
+            "attrs": {
+              "id": "frame-wrap",
+              "class": "wrap",
+              "style": "margin-top:-50px"
+            },
+            "content": [
+              "\n\t\t\t",
+              {
+                "tag": "div",
+                "attrs": {
+                  "class": "wrap_bg"
+                },
+                "content": [
+                  "\n\t\t\t\t",
+                  {
+                    "tag": "div",
+                    "attrs": {
+                      "id": "wrap"
+                    },
+                    "content": [
+                      "\n\t\t\t\t\t",
+                      {
+                        "tag": "div",
+                        "attrs": {
+                          "id": "wrap-1"
+                        },
+                        "content": [
+                          "\n\t\t\t\t\t\t",
+                          {
+                            "tag": "div",
+                            "attrs": {
+                              "id": "wrap-2"
+                            },
+                            "content": [
+                              "\n\t\t\t\t\t\t\t",
+                              {
+                                "tag": "div",
+                                "attrs": {
+                                  "id": "wrap-3"
+                                },
+                                "content": [
+                                  "\n\t\t\t\t\t\t\t\t",
+                                  {
+                                    "tag": "div",
+                                    "attrs": {
+                                      "id": "main"
+                                    },
+                                    "content": [
+                                      "\n\t\t\t\t\t\t\t\t\t",
+                                      {
+                                        "tag": "div",
+                                        "attrs": {
+                                          "id": "dTop"
+                                        },
+                                        "content": [
+                                          "\n\t\t\t\t\t\t\t\t\t\t",
+                                          {
+                                            "tag": "a",
+                                            "attrs": {
+                                              "href": "http://tx3.163.com/",
+                                              "target": "_blank",
+                                              "class": "aLogo"
+                                            },
+                                            "content": [
+                                              "天下3"
+                                            ]
+                                          },
+                                          "\n\t\t\t\t\t\t\t\t\t\t",
+                                          {
+                                            "tag": "div",
+                                            "attrs": {
+                                              "class": "dLink"
+                                            },
+                                            "content": [
+                                              "\n\t\t\t\t\t\t\t\t\t\t\t",
+                                              {
+                                                "tag": "img",
+                                                "attrs": {
+                                                  "src": "http://bang.tx3.163.com/favicon.ico",
+                                                  "style": "width:0px;height:0px;"
+                                                }
+                                              },
+                                              "\n\t\t\t\t\t\t\t\t\t\t\t",
+                                              {
+                                                "tag": "a",
+                                                "attrs": {
+                                                  "href": "/bang",
+                                                  "title": "bang.tx3.163.com"
+                                                },
+                                                "content": [
+                                                  "英雄榜首页"
+                                                ]
+                                              },
+                                              " 丨 ",
+                                              {
+                                                "tag": "a",
+                                                "attrs": {
+                                                  "href": "http://tx3.163.com/",
+                                                  "target": "_blank"
+                                                },
+                                                "content": [
+                                                  "官网"
+                                                ]
+                                              },
+                                              " | ",
+                                              {
+                                                "tag": "a",
+                                                "attrs": {
+                                                  "href": "http://tx3.gm.163.com/submit_sub.html?stypeid=1527",
+                                                  "target": "_blank"
+                                                },
+                                                "content": [
+                                                  "意见反馈"
+                                                ]
+                                              },
+                                              "\n\t\t\t\t\t\t\t\t\t\t"
+                                            ]
+                                          },
+                                          "\n\t\t\t\t\t\t\t\t\t"
+                                        ]
+                                      },
+                                      "\n\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n",
+                                      {
+                                        "tag": "div",
+                                        "attrs": {
+                                          "class": "dSearch"
+                                        },
+                                        "content": [
+                                          "\n\t",
+                                          {
+                                            "tag": "p",
+                                            "attrs": {
+                                              "class": "pTxt_S",
+                                              "id": "error_txt"
+                                            }
+                                          },
+                                          "\n\t",
+                                          {
+                                            "tag": "div",
+                                            "attrs": {
+                                              "class": "dInp_S"
+                                            },
+                                            "content": [
+                                              "\n\t\t",
+                                              {
+                                                "tag": "input",
+                                                "attrs": {
+                                                  "class": "inpTxt",
+                                                  "type": "text",
+                                                  "title": "请输入角色名，如果只记得部分关键字请按顺序用空格分开",
+                                                  "id": "search_name",
+                                                  "value": "请输入角色的名称 ",
+                                                  "autocomplete": "off",
+                                                  "onclick": "if(this.value == '请输入角色的名称 ')this.value = ''"
+                                                }
+                                              },
+                                              "\n\t\t",
+                                              {
+                                                "tag": "input",
+                                                "attrs": {
+                                                  "class": "inpBut",
+                                                  "type": "button",
+                                                  "value": " ",
+                                                  "id": "search_button"
+                                                }
+                                              },
+                                              "\n\t"
+                                            ]
+                                          },
+                                          "\n\n"
+                                        ]
+                                      },
+                                      "\n\n\n\n\n\n\n\n",
+                                      {
+                                        "tag": "div",
+                                        "attrs": {
+                                          "id": "DropMenu",
+                                          "class": "dList",
+                                          "style": "display:block;"
+                                        },
+                                        "content": [
+                                          "\n\t",
+                                          {
+                                            "tag": "ul",
+                                            "attrs": {
+                                              "class": "dList1",
+                                              "id": "dList1"
+                                            },
+                                            "content": [
+                                              "\n\t\t",
+                                              {
+                                                "tag": "li",
+                                                "content": [
+                                                  "\n\t\t",
+                                                  {
+                                                    "tag": "a",
+                                                    "attrs": {
+                                                      "href": "javascript:void(0);",
+                                                      "class": "hide top"
+                                                    },
+                                                    "content": [
+                                                      "排行榜"
+                                                    ]
+                                                  },
+                                                  "\n\t\t",
+                                                  {
+                                                    "tag": "ul",
+                                                    "content": [
+                                                      "\n\t\t\t",
+                                                      {
+                                                        "tag": "li",
+                                                        "content": [
+                                                          "\n\t\t\t",
+                                                          {
+                                                            "tag": "a",
+                                                            "attrs": {
+                                                              "href": "javascript:void(0)"
+                                                            },
+                                                            "content": [
+                                                              "个人修为门派排行榜 &gt;&gt;"
+                                                            ]
+                                                          },
+                                                          "\n\t\t\t",
+                                                          {
+                                                            "tag": "ul",
+                                                            "content": [
+                                                              "\n\t\t\t\t\n\t\t\t\t",
+                                                              {
+                                                                "tag": "li",
+                                                                "content": [
+                                                                  "\n\t\t\t\t",
+                                                                  {
+                                                                    "tag": "a",
+                                                                    "attrs": {
+                                                                      "href": "/bang/ranks?school=1&order_key=xiuwei&server="
+                                                                    },
+                                                                    "content": [
+                                                                      "荒火教"
+                                                                    ]
+                                                                  },
+                                                                  "\n\t\t\t\t"
+                                                                ]
+                                                              },
+                                                              "\n\t\t\t\t\n\t\t\t\t",
+                                                              {
+                                                                "tag": "li",
+                                                                "content": [
+                                                                  "\n\t\t\t\t",
+                                                                  {
+                                                                    "tag": "a",
+                                                                    "attrs": {
+                                                                      "href": "/bang/ranks?school=2&order_key=xiuwei&server="
+                                                                    },
+                                                                    "content": [
+                                                                      "天机营"
+                                                                    ]
+                                                                  },
+                                                                  "\n\t\t\t\t"
+                                                                ]
+                                                              },
+                                                              "\n\t\t\t\t\n\t\t\t\t",
+                                                              {
+                                                                "tag": "li",
+                                                                "content": [
+                                                                  "\n\t\t\t\t",
+                                                                  {
+                                                                    "tag": "a",
+                                                                    "attrs": {
+                                                                      "href": "/bang/ranks?school=3&order_key=xiuwei&server="
+                                                                    },
+                                                                    "content": [
+                                                                      "翎羽山庄"
+                                                                    ]
+                                                                  },
+                                                                  "\n\t\t\t\t"
+                                                                ]
+                                                              },
+                                                              "\n\t\t\t\t\n\t\t\t\t",
+                                                              {
+                                                                "tag": "li",
+                                                                "content": [
+                                                                  "\n\t\t\t\t",
+                                                                  {
+                                                                    "tag": "a",
+                                                                    "attrs": {
+                                                                      "href": "/bang/ranks?school=4&order_key=xiuwei&server="
+                                                                    },
+                                                                    "content": [
+                                                                      "魍魉"
+                                                                    ]
+                                                                  },
+                                                                  "\n\t\t\t\t"
+                                                                ]
+                                                              },
+                                                              "\n\t\t\t\t\n\t\t\t\t",
+                                                              {
+                                                                "tag": "li",
+                                                                "content": [
+                                                                  "\n\t\t\t\t",
+                                                                  {
+                                                                    "tag": "a",
+                                                                    "attrs": {
+                                                                      "href": "/bang/ranks?school=5&order_key=xiuwei&server="
+                                                                    },
+                                                                    "content": [
+                                                                      "太虚观"
+                                                                    ]
+                                                                  },
+                                                                  "\n\t\t\t\t"
+                                                                ]
+                                                              },
+                                                              "\n\t\t\t\t\n\t\t\t\t",
+                                                              {
+                                                                "tag": "li",
+                                                                "content": [
+                                                                  "\n\t\t\t\t",
+                                                                  {
+                                                                    "tag": "a",
+                                                                    "attrs": {
+                                                                      "href": "/bang/ranks?school=6&order_key=xiuwei&server="
+                                                                    },
+                                                                    "content": [
+                                                                      "云麓仙居"
+                                                                    ]
+                                                                  },
+                                                                  "\n\t\t\t\t"
+                                                                ]
+                                                              },
+                                                              "\n\t\t\t\t\n\t\t\t\t",
+                                                              {
+                                                                "tag": "li",
+                                                                "content": [
+                                                                  "\n\t\t\t\t",
+                                                                  {
+                                                                    "tag": "a",
+                                                                    "attrs": {
+                                                                      "href": "/bang/ranks?school=7&order_key=xiuwei&server="
+                                                                    },
+                                                                    "content": [
+                                                                      "冰心堂"
+                                                                    ]
+                                                                  },
+                                                                  "\n\t\t\t\t"
+                                                                ]
+                                                              },
+                                                              "\n\t\t\t\t\n\t\t\t\t",
+                                                              {
+                                                                "tag": "li",
+                                                                "content": [
+                                                                  "\n\t\t\t\t",
+                                                                  {
+                                                                    "tag": "a",
+                                                                    "attrs": {
+                                                                      "href": "/bang/ranks?school=8&order_key=xiuwei&server="
+                                                                    },
+                                                                    "content": [
+                                                                      "弈剑听雨阁"
+                                                                    ]
+                                                                  },
+                                                                  "\n\t\t\t\t"
+                                                                ]
+                                                              },
+                                                              "\n\t\t\t\t\n\t\t\t\t",
+                                                              {
+                                                                "tag": "li",
+                                                                "content": [
+                                                                  "\n\t\t\t\t",
+                                                                  {
+                                                                    "tag": "a",
+                                                                    "attrs": {
+                                                                      "href": "/bang/ranks?school=9&order_key=xiuwei&server="
+                                                                    },
+                                                                    "content": [
+                                                                      "鬼墨"
+                                                                    ]
+                                                                  },
+                                                                  "\n\t\t\t\t"
+                                                                ]
+                                                              },
+                                                              "\n\t\t\t\t\n\t\t\t\t",
+                                                              {
+                                                                "tag": "li",
+                                                                "content": [
+                                                                  "\n\t\t\t\t",
+                                                                  {
+                                                                    "tag": "a",
+                                                                    "attrs": {
+                                                                      "href": "/bang/ranks?school=10&order_key=xiuwei&server="
+                                                                    },
+                                                                    "content": [
+                                                                      "龙巫宫"
+                                                                    ]
+                                                                  },
+                                                                  "\n\t\t\t\t"
+                                                                ]
+                                                              },
+                                                              "\n\t\t\t\t\n\t\t\t\t",
+                                                              {
+                                                                "tag": "li",
+                                                                "content": [
+                                                                  "\n\t\t\t\t",
+                                                                  {
+                                                                    "tag": "a",
+                                                                    "attrs": {
+                                                                      "href": "/bang/ranks?school=11&order_key=xiuwei&server="
+                                                                    },
+                                                                    "content": [
+                                                                      "幽篁国"
+                                                                    ]
+                                                                  },
+                                                                  "\n\t\t\t\t"
+                                                                ]
+                                                              },
+                                                              "\n\t\t\t\t\n\t\t\t"
+                                                            ]
+                                                          },
+                                                          "\n\t\t\t"
+                                                        ]
+                                                      },
+                                                      "\n\t\t\t",
+                                                      {
+                                                        "tag": "li",
+                                                        "content": [
+                                                          "\n\t\t\t",
+                                                          {
+                                                            "tag": "a",
+                                                            "attrs": {
+                                                              "href": "/bang/ranks?school=&order_key=xiuwei&server=%E7%99%BD%E4%BA%91%E5%B1%B1"
+                                                            },
+                                                            "content": [
+                                                              "个人修为服务器排行榜"
+                                                            ]
+                                                          },
+                                                          "\n\t\t\t"
+                                                        ]
+                                                      },
+                                                      "\n\t\t\t",
+                                                      {
+                                                        "tag": "li",
+                                                        "content": [
+                                                          "\n\t\t\t",
+                                                          {
+                                                            "tag": "a",
+                                                            "attrs": {
+                                                              "href": "/bang/ranks?school=&order_key=total_xiuwei&server="
+                                                            },
+                                                            "content": [
+                                                              "个人修为总排行榜"
+                                                            ]
+                                                          },
+                                                          "\n\t\t\t"
+                                                        ]
+                                                      },
+                                                      "\n\t\t\t",
+                                                      {
+                                                        "tag": "li",
+                                                        "content": [
+                                                          "\n\t\t\t",
+                                                          {
+                                                            "tag": "a",
+                                                            "attrs": {
+                                                              "href": "javascript:void(0)"
+                                                            },
+                                                            "content": [
+                                                              "装备评价门派排行榜 &gt;&gt;"
+                                                            ]
+                                                          },
+                                                          "\n\t\t\t",
+                                                          {
+                                                            "tag": "ul",
+                                                            "content": [
+                                                              "\n\t\t\t\t\n\t\t\t\t",
+                                                              {
+                                                                "tag": "li",
+                                                                "content": [
+                                                                  "\n\t\t\t\t",
+                                                                  {
+                                                                    "tag": "a",
+                                                                    "attrs": {
+                                                                      "href": "/bang/ranks?school=1&order_key=equ_xiuwei&server="
+                                                                    },
+                                                                    "content": [
+                                                                      "荒火教"
+                                                                    ]
+                                                                  },
+                                                                  "\n\t\t\t\t"
+                                                                ]
+                                                              },
+                                                              "\n\t\t\t\t\n\t\t\t\t",
+                                                              {
+                                                                "tag": "li",
+                                                                "content": [
+                                                                  "\n\t\t\t\t",
+                                                                  {
+                                                                    "tag": "a",
+                                                                    "attrs": {
+                                                                      "href": "/bang/ranks?school=2&order_key=equ_xiuwei&server="
+                                                                    },
+                                                                    "content": [
+                                                                      "天机营"
+                                                                    ]
+                                                                  },
+                                                                  "\n\t\t\t\t"
+                                                                ]
+                                                              },
+                                                              "\n\t\t\t\t\n\t\t\t\t",
+                                                              {
+                                                                "tag": "li",
+                                                                "content": [
+                                                                  "\n\t\t\t\t",
+                                                                  {
+                                                                    "tag": "a",
+                                                                    "attrs": {
+                                                                      "href": "/bang/ranks?school=3&order_key=equ_xiuwei&server="
+                                                                    },
+                                                                    "content": [
+                                                                      "翎羽山庄"
+                                                                    ]
+                                                                  },
+                                                                  "\n\t\t\t\t"
+                                                                ]
+                                                              },
+                                                              "\n\t\t\t\t\n\t\t\t\t",
+                                                              {
+                                                                "tag": "li",
+                                                                "content": [
+                                                                  "\n\t\t\t\t",
+                                                                  {
+                                                                    "tag": "a",
+                                                                    "attrs": {
+                                                                      "href": "/bang/ranks?school=4&order_key=equ_xiuwei&server="
+                                                                    },
+                                                                    "content": [
+                                                                      "魍魉"
+                                                                    ]
+                                                                  },
+                                                                  "\n\t\t\t\t"
+                                                                ]
+                                                              },
+                                                              "\n\t\t\t\t\n\t\t\t\t",
+                                                              {
+                                                                "tag": "li",
+                                                                "content": [
+                                                                  "\n\t\t\t\t",
+                                                                  {
+                                                                    "tag": "a",
+                                                                    "attrs": {
+                                                                      "href": "/bang/ranks?school=5&order_key=equ_xiuwei&server="
+                                                                    },
+                                                                    "content": [
+                                                                      "太虚观"
+                                                                    ]
+                                                                  },
+                                                                  "\n\t\t\t\t"
+                                                                ]
+                                                              },
+                                                              "\n\t\t\t\t\n\t\t\t\t",
+                                                              {
+                                                                "tag": "li",
+                                                                "content": [
+                                                                  "\n\t\t\t\t",
+                                                                  {
+                                                                    "tag": "a",
+                                                                    "attrs": {
+                                                                      "href": "/bang/ranks?school=6&order_key=equ_xiuwei&server="
+                                                                    },
+                                                                    "content": [
+                                                                      "云麓仙居"
+                                                                    ]
+                                                                  },
+                                                                  "\n\t\t\t\t"
+                                                                ]
+                                                              },
+                                                              "\n\t\t\t\t\n\t\t\t\t",
+                                                              {
+                                                                "tag": "li",
+                                                                "content": [
+                                                                  "\n\t\t\t\t",
+                                                                  {
+                                                                    "tag": "a",
+                                                                    "attrs": {
+                                                                      "href": "/bang/ranks?school=7&order_key=equ_xiuwei&server="
+                                                                    },
+                                                                    "content": [
+                                                                      "冰心堂"
+                                                                    ]
+                                                                  },
+                                                                  "\n\t\t\t\t"
+                                                                ]
+                                                              },
+                                                              "\n\t\t\t\t\n\t\t\t\t",
+                                                              {
+                                                                "tag": "li",
+                                                                "content": [
+                                                                  "\n\t\t\t\t",
+                                                                  {
+                                                                    "tag": "a",
+                                                                    "attrs": {
+                                                                      "href": "/bang/ranks?school=8&order_key=equ_xiuwei&server="
+                                                                    },
+                                                                    "content": [
+                                                                      "弈剑听雨阁"
+                                                                    ]
+                                                                  },
+                                                                  "\n\t\t\t\t"
+                                                                ]
+                                                              },
+                                                              "\n\t\t\t\t\n\t\t\t\t",
+                                                              {
+                                                                "tag": "li",
+                                                                "content": [
+                                                                  "\n\t\t\t\t",
+                                                                  {
+                                                                    "tag": "a",
+                                                                    "attrs": {
+                                                                      "href": "/bang/ranks?school=9&order_key=equ_xiuwei&server="
+                                                                    },
+                                                                    "content": [
+                                                                      "鬼墨"
+                                                                    ]
+                                                                  },
+                                                                  "\n\t\t\t\t"
+                                                                ]
+                                                              },
+                                                              "\n\t\t\t\t\n\t\t\t\t",
+                                                              {
+                                                                "tag": "li",
+                                                                "content": [
+                                                                  "\n\t\t\t\t",
+                                                                  {
+                                                                    "tag": "a",
+                                                                    "attrs": {
+                                                                      "href": "/bang/ranks?school=10&order_key=equ_xiuwei&server="
+                                                                    },
+                                                                    "content": [
+                                                                      "龙巫宫"
+                                                                    ]
+                                                                  },
+                                                                  "\n\t\t\t\t"
+                                                                ]
+                                                              },
+                                                              "\n\t\t\t\t\n\t\t\t\t",
+                                                              {
+                                                                "tag": "li",
+                                                                "content": [
+                                                                  "\n\t\t\t\t",
+                                                                  {
+                                                                    "tag": "a",
+                                                                    "attrs": {
+                                                                      "href": "/bang/ranks?school=11&order_key=equ_xiuwei&server="
+                                                                    },
+                                                                    "content": [
+                                                                      "幽篁国"
+                                                                    ]
+                                                                  },
+                                                                  "\n\t\t\t\t"
+                                                                ]
+                                                              },
+                                                              "\n\t\t\t\t\n\t\t\t"
+                                                            ]
+                                                          },
+                                                          "\n\t\t\t"
+                                                        ]
+                                                      },
+                                                      "\n\t\t\t",
+                                                      {
+                                                        "tag": "li",
+                                                        "content": [
+                                                          "\n\t\t\t",
+                                                          {
+                                                            "tag": "a",
+                                                            "attrs": {
+                                                              "href": "/bang/ranks?school=&order_key=equ_xiuwei&server=%E7%99%BD%E4%BA%91%E5%B1%B1"
+                                                            },
+                                                            "content": [
+                                                              "装备评价服务器排行榜"
+                                                            ]
+                                                          },
+                                                          "\n\t\t\t"
+                                                        ]
+                                                      },
+                                                      "\n\t\t\t",
+                                                      {
+                                                        "tag": "li",
+                                                        "content": [
+                                                          "\n\t\t\t",
+                                                          {
+                                                            "tag": "a",
+                                                            "attrs": {
+                                                              "href": "/bang/ranks?school=&order_key=equ_xiuwei&server="
+                                                            },
+                                                            "content": [
+                                                              "装备评价总排行榜"
+                                                            ]
+                                                          },
+                                                          "\n\t\t\t"
+                                                        ]
+                                                      },
+                                                      "\n\t\t\t",
+                                                      {
+                                                        "tag": "li",
+                                                        "content": [
+                                                          "\n\t\t\t",
+                                                          {
+                                                            "tag": "a",
+                                                            "attrs": {
+                                                              "href": "javascript:void(0)"
+                                                            },
+                                                            "content": [
+                                                              "总修为门派排行榜 &gt;&gt;"
+                                                            ]
+                                                          },
+                                                          "\n\t\t\t",
+                                                          {
+                                                            "tag": "ul",
+                                                            "content": [
+                                                              "\n\t\t\t\t\n\t\t\t\t",
+                                                              {
+                                                                "tag": "li",
+                                                                "content": [
+                                                                  "\n\t\t\t\t",
+                                                                  {
+                                                                    "tag": "a",
+                                                                    "attrs": {
+                                                                      "href": "/bang/ranks?school=1&order_key=total_xiuwei&server="
+                                                                    },
+                                                                    "content": [
+                                                                      "荒火教"
+                                                                    ]
+                                                                  },
+                                                                  "\n\t\t\t\t"
+                                                                ]
+                                                              },
+                                                              "\n\t\t\t\t\n\t\t\t\t",
+                                                              {
+                                                                "tag": "li",
+                                                                "content": [
+                                                                  "\n\t\t\t\t",
+                                                                  {
+                                                                    "tag": "a",
+                                                                    "attrs": {
+                                                                      "href": "/bang/ranks?school=2&order_key=total_xiuwei&server="
+                                                                    },
+                                                                    "content": [
+                                                                      "天机营"
+                                                                    ]
+                                                                  },
+                                                                  "\n\t\t\t\t"
+                                                                ]
+                                                              },
+                                                              "\n\t\t\t\t\n\t\t\t\t",
+                                                              {
+                                                                "tag": "li",
+                                                                "content": [
+                                                                  "\n\t\t\t\t",
+                                                                  {
+                                                                    "tag": "a",
+                                                                    "attrs": {
+                                                                      "href": "/bang/ranks?school=3&order_key=total_xiuwei&server="
+                                                                    },
+                                                                    "content": [
+                                                                      "翎羽山庄"
+                                                                    ]
+                                                                  },
+                                                                  "\n\t\t\t\t"
+                                                                ]
+                                                              },
+                                                              "\n\t\t\t\t\n\t\t\t\t",
+                                                              {
+                                                                "tag": "li",
+                                                                "content": [
+                                                                  "\n\t\t\t\t",
+                                                                  {
+                                                                    "tag": "a",
+                                                                    "attrs": {
+                                                                      "href": "/bang/ranks?school=4&order_key=total_xiuwei&server="
+                                                                    },
+                                                                    "content": [
+                                                                      "魍魉"
+                                                                    ]
+                                                                  },
+                                                                  "\n\t\t\t\t"
+                                                                ]
+                                                              },
+                                                              "\n\t\t\t\t\n\t\t\t\t",
+                                                              {
+                                                                "tag": "li",
+                                                                "content": [
+                                                                  "\n\t\t\t\t",
+                                                                  {
+                                                                    "tag": "a",
+                                                                    "attrs": {
+                                                                      "href": "/bang/ranks?school=5&order_key=total_xiuwei&server="
+                                                                    },
+                                                                    "content": [
+                                                                      "太虚观"
+                                                                    ]
+                                                                  },
+                                                                  "\n\t\t\t\t"
+                                                                ]
+                                                              },
+                                                              "\n\t\t\t\t\n\t\t\t\t",
+                                                              {
+                                                                "tag": "li",
+                                                                "content": [
+                                                                  "\n\t\t\t\t",
+                                                                  {
+                                                                    "tag": "a",
+                                                                    "attrs": {
+                                                                      "href": "/bang/ranks?school=6&order_key=total_xiuwei&server="
+                                                                    },
+                                                                    "content": [
+                                                                      "云麓仙居"
+                                                                    ]
+                                                                  },
+                                                                  "\n\t\t\t\t"
+                                                                ]
+                                                              },
+                                                              "\n\t\t\t\t\n\t\t\t\t",
+                                                              {
+                                                                "tag": "li",
+                                                                "content": [
+                                                                  "\n\t\t\t\t",
+                                                                  {
+                                                                    "tag": "a",
+                                                                    "attrs": {
+                                                                      "href": "/bang/ranks?school=7&order_key=total_xiuwei&server="
+                                                                    },
+                                                                    "content": [
+                                                                      "冰心堂"
+                                                                    ]
+                                                                  },
+                                                                  "\n\t\t\t\t"
+                                                                ]
+                                                              },
+                                                              "\n\t\t\t\t\n\t\t\t\t",
+                                                              {
+                                                                "tag": "li",
+                                                                "content": [
+                                                                  "\n\t\t\t\t",
+                                                                  {
+                                                                    "tag": "a",
+                                                                    "attrs": {
+                                                                      "href": "/bang/ranks?school=8&order_key=total_xiuwei&server="
+                                                                    },
+                                                                    "content": [
+                                                                      "弈剑听雨阁"
+                                                                    ]
+                                                                  },
+                                                                  "\n\t\t\t\t"
+                                                                ]
+                                                              },
+                                                              "\n\t\t\t\t\n\t\t\t\t",
+                                                              {
+                                                                "tag": "li",
+                                                                "content": [
+                                                                  "\n\t\t\t\t",
+                                                                  {
+                                                                    "tag": "a",
+                                                                    "attrs": {
+                                                                      "href": "/bang/ranks?school=9&order_key=total_xiuwei&server="
+                                                                    },
+                                                                    "content": [
+                                                                      "鬼墨"
+                                                                    ]
+                                                                  },
+                                                                  "\n\t\t\t\t"
+                                                                ]
+                                                              },
+                                                              "\n\t\t\t\t\n\t\t\t\t",
+                                                              {
+                                                                "tag": "li",
+                                                                "content": [
+                                                                  "\n\t\t\t\t",
+                                                                  {
+                                                                    "tag": "a",
+                                                                    "attrs": {
+                                                                      "href": "/bang/ranks?school=10&order_key=total_xiuwei&server="
+                                                                    },
+                                                                    "content": [
+                                                                      "龙巫宫"
+                                                                    ]
+                                                                  },
+                                                                  "\n\t\t\t\t"
+                                                                ]
+                                                              },
+                                                              "\n\t\t\t\t\n\t\t\t\t",
+                                                              {
+                                                                "tag": "li",
+                                                                "content": [
+                                                                  "\n\t\t\t\t",
+                                                                  {
+                                                                    "tag": "a",
+                                                                    "attrs": {
+                                                                      "href": "/bang/ranks?school=11&order_key=total_xiuwei&server="
+                                                                    },
+                                                                    "content": [
+                                                                      "幽篁国"
+                                                                    ]
+                                                                  },
+                                                                  "\n\t\t\t\t"
+                                                                ]
+                                                              },
+                                                              "\n\t\t\t\t\n\t\t\t"
+                                                            ]
+                                                          },
+                                                          "\n\t\t\t"
+                                                        ]
+                                                      },
+                                                      "\n\t\t\t",
+                                                      {
+                                                        "tag": "li",
+                                                        "content": [
+                                                          "\n\t\t\t",
+                                                          {
+                                                            "tag": "a",
+                                                            "attrs": {
+                                                              "href": "/bang/ranks?school=&order_key=total_xiuwei&server=%E7%99%BD%E4%BA%91%E5%B1%B1"
+                                                            },
+                                                            "content": [
+                                                              "总修为服务器排行榜"
+                                                            ]
+                                                          },
+                                                          "\n\t\t\t"
+                                                        ]
+                                                      },
+                                                      "\n\t\t\t",
+                                                      {
+                                                        "tag": "li",
+                                                        "content": [
+                                                          "\n\t\t\t",
+                                                          {
+                                                            "tag": "a",
+                                                            "attrs": {
+                                                              "href": "/bang/ranks?school=&order_key=total_xiuwei&server="
+                                                            },
+                                                            "content": [
+                                                              "总修为排行榜"
+                                                            ]
+                                                          },
+                                                          "\n\t\t\t"
+                                                        ]
+                                                      },
+                                                      "\n\t\t"
+                                                    ]
+                                                  },
+                                                  "\n\t\t"
+                                                ]
+                                              },
+                                              "\n\t"
+                                            ]
+                                          },
+                                          "\n\n\t",
+                                          {
+                                            "tag": "ul",
+                                            "attrs": {
+                                              "class": "dList2",
+                                              "id": "dList2"
+                                            },
+                                            "content": [
+                                              "\n\t\t",
+                                              {
+                                                "tag": "li",
+                                                "content": [
+                                                  "\n\t\t",
+                                                  {
+                                                    "tag": "a",
+                                                    "attrs": {
+                                                      "href": "javascript:void(0);",
+                                                      "class": "hide top"
+                                                    },
+                                                    "content": [
+                                                      "小工具"
+                                                    ]
+                                                  },
+                                                  "\n\t\t",
+                                                  {
+                                                    "tag": "ul",
+                                                    "content": [
+                                                      "\n\t\t\t",
+                                                      {
+                                                        "tag": "li",
+                                                        "content": [
+                                                          "\n\t\t\t",
+                                                          {
+                                                            "tag": "a",
+                                                            "attrs": {
+                                                              "href": "http://tx3.netease.com/viewthread.php?tid=4478579",
+                                                              "target": "_blank"
+                                                            },
+                                                            "content": [
+                                                              "玄修模拟器"
+                                                            ]
+                                                          },
+                                                          "\n\t\t\t"
+                                                        ]
+                                                      },
+                                                      "\n\t\t"
+                                                    ]
+                                                  },
+                                                  "\n\t\t"
+                                                ]
+                                              },
+                                              "\n\t"
+                                            ]
+                                          },
+                                          "\n\n"
+                                        ]
+                                      },
+                                      "\n\n\n",
+                                      {
+                                        "tag": "ul",
+                                        "attrs": {
+                                          "id": "search_hints",
+                                          "style": "display:none",
+                                          "class": "search_hints"
+                                        }
+                                      },
+                                      "\n\n\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\n",
+                                      {
+                                        "tag": "div",
+                                        "attrs": {
+                                          "class": "dMain clear",
+                                          "id": "ranks_panel"
+                                        },
+                                        "content": [
+                                          "\n\t",
+                                          {
+                                            "tag": "div",
+                                            "attrs": {
+                                              "class": "dBox_1"
+                                            },
+                                            "content": [
+                                              "\n\t\t",
+                                              {
+                                                "tag": "div",
+                                                "attrs": {
+                                                  "class": "dHead_1"
+                                                },
+                                                "content": [
+                                                  "\n\t\t\t",
+                                                  {
+                                                    "tag": "div",
+                                                    "attrs": {
+                                                      "class": "result_title"
+                                                    },
+                                                    "content": [
+                                                      "\n\t\t\t\t装备评价排行榜\n\t\t\t"
+                                                    ]
+                                                  },
+                                                  "\n\t\t"
+                                                ]
+                                              },
+                                              "\n\t\t",
+                                              {
+                                                "tag": "div",
+                                                "attrs": {
+                                                  "class": "dBody_1 clear"
+                                                },
+                                                "content": [
+                                                  "\n\t\t\t",
+                                                  {
+                                                    "tag": "div",
+                                                    "attrs": {
+                                                      "class": "selecterBox2"
+                                                    },
+                                                    "content": [
+                                                      "\n\t\t\t\t",
+                                                      {
+                                                        "tag": "input",
+                                                        "attrs": {
+                                                          "type": "hidden",
+                                                          "id": "display_school",
+                                                          "value": "4"
+                                                        }
+                                                      },
+                                                      "\n\t\t\t\t",
+                                                      {
+                                                        "tag": "input",
+                                                        "attrs": {
+                                                          "type": "hidden",
+                                                          "id": "display_sector",
+                                                          "value": "河南区"
+                                                        }
+                                                      },
+                                                      "\n\t\t\t\t",
+                                                      {
+                                                        "tag": "input",
+                                                        "attrs": {
+                                                          "type": "hidden",
+                                                          "id": "display_server",
+                                                          "value": "逐鹿中原"
+                                                        }
+                                                      },
+                                                      "\n\n\t\t\t\t",
+                                                      {
+                                                        "tag": "form",
+                                                        "attrs": {
+                                                          "method": "GET",
+                                                          "id": "query_form"
+                                                        },
+                                                        "content": [
+                                                          "\n\t\t\t\t",
+                                                          {
+                                                            "tag": "input",
+                                                            "attrs": {
+                                                              "type": "hidden",
+                                                              "name": "order_key",
+                                                              "value": "equ_xiuwei"
+                                                            }
+                                                          },
+                                                          "\n\t\t\t\t",
+                                                          {
+                                                            "tag": "input",
+                                                            "attrs": {
+                                                              "type": "hidden",
+                                                              "name": "school",
+                                                              "value": "4"
+                                                            }
+                                                          },
+                                                          "\n\t\t\t\t",
+                                                          {
+                                                            "tag": "input",
+                                                            "attrs": {
+                                                              "type": "hidden",
+                                                              "name": "sector",
+                                                              "value": "河南区"
+                                                            }
+                                                          },
+                                                          "\n\t\t\t\t",
+                                                          {
+                                                            "tag": "input",
+                                                            "attrs": {
+                                                              "type": "hidden",
+                                                              "name": "server",
+                                                              "value": "逐鹿中原"
+                                                            }
+                                                          },
+                                                          "\n\n\t\t\t\t\t",
+                                                          {
+                                                            "tag": "label",
+                                                            "attrs": {
+                                                              "for": "order_key"
+                                                            },
+                                                            "content": [
+                                                              "排行榜:"
+                                                            ]
+                                                          },
+                                                          "\n\t\t\t\t\t",
+                                                          "<!--select name=\"order_key\" id=\"order_key\">\n\t\t\t\t\t\t\n\t\t\t\t\t\t<option value=\"total_xiuwei\" >总修为</option>\n\t\t\t\t\t\t\n\t\t\t\t\t\t<option value=\"xiuwei\" >人物修为</option>\n\t\t\t\t\t\t\n\t\t\t\t\t\t<option value=\"equ_xiuwei\" selected=selected>装备评价</option>\n\t\t\t\t\t\t\n\t\t\t\t\t</select-->",
+                                                          "\n                    ",
+                                                          {
+                                                            "tag": "div",
+                                                            "attrs": {
+                                                              "class": "select"
+                                                            },
+                                                            "content": [
+                                                              "\n                        ",
+                                                              {
+                                                                "tag": "div",
+                                                                "attrs": {
+                                                                  "class": "fdown"
+                                                                },
+                                                                "content": [
+                                                                  "\n                            ",
+                                                                  {
+                                                                    "tag": "p",
+                                                                    "attrs": {
+                                                                      "id": "orderTxt"
+                                                                    },
+                                                                    "content": [
+                                                                      "总修为"
+                                                                    ]
+                                                                  },
+                                                                  "\n                            ",
+                                                                  {
+                                                                    "tag": "a",
+                                                                    "attrs": {
+                                                                      "href": "javascript:void(0)"
+                                                                    }
+                                                                  },
+                                                                  "\n                        "
+                                                                ]
+                                                              },
+                                                              "\n                        ",
+                                                              {
+                                                                "tag": "ul",
+                                                                "attrs": {
+                                                                  "id": "order_key"
+                                                                },
+                                                                "content": [
+                                                                  "\n                            \n                            ",
+                                                                  {
+                                                                    "tag": "li",
+                                                                    "attrs": {
+                                                                      "data-txt": "total_xiuwei"
+                                                                    },
+                                                                    "content": [
+                                                                      "总修为"
+                                                                    ]
+                                                                  },
+                                                                  "\n                            \n                            ",
+                                                                  {
+                                                                    "tag": "li",
+                                                                    "attrs": {
+                                                                      "data-txt": "xiuwei"
+                                                                    },
+                                                                    "content": [
+                                                                      "人物修为"
+                                                                    ]
+                                                                  },
+                                                                  "\n                            \n                            ",
+                                                                  {
+                                                                    "tag": "li",
+                                                                    "attrs": {
+                                                                      "data-txt": "equ_xiuwei",
+                                                                      "class": "active"
+                                                                    },
+                                                                    "content": [
+                                                                      "装备评价"
+                                                                    ]
+                                                                  },
+                                                                  "\n                            \n                        "
+                                                                ]
+                                                              },
+                                                              "\n                    "
+                                                            ]
+                                                          },
+                                                          "\n\n\t\t\t\t\t",
+                                                          {
+                                                            "tag": "label",
+                                                            "attrs": {
+                                                              "for": "school"
+                                                            },
+                                                            "content": [
+                                                              "门派:"
+                                                            ]
+                                                          },
+                                                          "\n\t\t\t\t\t",
+                                                          "<!--select name=\"school\" id=\"school\">\n\t\t\t\t\t\t<option value=\"\">所有门派</option>\n\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t<option value=\"1\">荒火教</option>\n\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t<option value=\"2\">天机营</option>\n\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t<option value=\"3\">翎羽山庄</option>\n\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t<option value=\"4\" selected=\"selected\">魍魉</option>\n\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t<option value=\"5\">太虚观</option>\n\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t<option value=\"6\">云麓仙居</option>\n\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t<option value=\"7\">冰心堂</option>\n\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t<option value=\"8\">弈剑听雨阁</option>\n\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t<option value=\"9\">鬼墨</option>\n\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t<option value=\"10\">龙巫宫</option>\n\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t<option value=\"11\">幽篁国</option>\n\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t</select-->",
+                                                          "\n                     ",
+                                                          {
+                                                            "tag": "div",
+                                                            "attrs": {
+                                                              "class": "select"
+                                                            },
+                                                            "content": [
+                                                              "\n                        ",
+                                                              {
+                                                                "tag": "div",
+                                                                "attrs": {
+                                                                  "class": "fdown"
+                                                                },
+                                                                "content": [
+                                                                  "\n                            ",
+                                                                  {
+                                                                    "tag": "p",
+                                                                    "attrs": {
+                                                                      "id": "schoolTxt"
+                                                                    },
+                                                                    "content": [
+                                                                      "所有门派"
+                                                                    ]
+                                                                  },
+                                                                  "\n                            ",
+                                                                  {
+                                                                    "tag": "a",
+                                                                    "attrs": {
+                                                                      "href": "javascript:void(0)"
+                                                                    }
+                                                                  },
+                                                                  "\n                        "
+                                                                ]
+                                                              },
+                                                              "\n                        ",
+                                                              {
+                                                                "tag": "ul",
+                                                                "attrs": {
+                                                                  "id": "school"
+                                                                },
+                                                                "content": [
+                                                                  "\n                            ",
+                                                                  {
+                                                                    "tag": "li",
+                                                                    "attrs": {
+                                                                      "data-txt": ""
+                                                                    },
+                                                                    "content": [
+                                                                      "所有门派"
+                                                                    ]
+                                                                  },
+                                                                  "\n                            \n                            ",
+                                                                  {
+                                                                    "tag": "li",
+                                                                    "attrs": {
+                                                                      "data-txt": "1"
+                                                                    },
+                                                                    "content": [
+                                                                      "荒火教"
+                                                                    ]
+                                                                  },
+                                                                  "\n                            \n                            ",
+                                                                  {
+                                                                    "tag": "li",
+                                                                    "attrs": {
+                                                                      "data-txt": "2"
+                                                                    },
+                                                                    "content": [
+                                                                      "天机营"
+                                                                    ]
+                                                                  },
+                                                                  "\n                            \n                            ",
+                                                                  {
+                                                                    "tag": "li",
+                                                                    "attrs": {
+                                                                      "data-txt": "3"
+                                                                    },
+                                                                    "content": [
+                                                                      "翎羽山庄"
+                                                                    ]
+                                                                  },
+                                                                  "\n                            \n                            ",
+                                                                  {
+                                                                    "tag": "li",
+                                                                    "attrs": {
+                                                                      "data-txt": "4",
+                                                                      "class": "active"
+                                                                    },
+                                                                    "content": [
+                                                                      "魍魉"
+                                                                    ]
+                                                                  },
+                                                                  "\n                            \n                            ",
+                                                                  {
+                                                                    "tag": "li",
+                                                                    "attrs": {
+                                                                      "data-txt": "5"
+                                                                    },
+                                                                    "content": [
+                                                                      "太虚观"
+                                                                    ]
+                                                                  },
+                                                                  "\n                            \n                            ",
+                                                                  {
+                                                                    "tag": "li",
+                                                                    "attrs": {
+                                                                      "data-txt": "6"
+                                                                    },
+                                                                    "content": [
+                                                                      "云麓仙居"
+                                                                    ]
+                                                                  },
+                                                                  "\n                            \n                            ",
+                                                                  {
+                                                                    "tag": "li",
+                                                                    "attrs": {
+                                                                      "data-txt": "7"
+                                                                    },
+                                                                    "content": [
+                                                                      "冰心堂"
+                                                                    ]
+                                                                  },
+                                                                  "\n                            \n                            ",
+                                                                  {
+                                                                    "tag": "li",
+                                                                    "attrs": {
+                                                                      "data-txt": "8"
+                                                                    },
+                                                                    "content": [
+                                                                      "弈剑听雨阁"
+                                                                    ]
+                                                                  },
+                                                                  "\n                            \n                            ",
+                                                                  {
+                                                                    "tag": "li",
+                                                                    "attrs": {
+                                                                      "data-txt": "9"
+                                                                    },
+                                                                    "content": [
+                                                                      "鬼墨"
+                                                                    ]
+                                                                  },
+                                                                  "\n                            \n                            ",
+                                                                  {
+                                                                    "tag": "li",
+                                                                    "attrs": {
+                                                                      "data-txt": "10"
+                                                                    },
+                                                                    "content": [
+                                                                      "龙巫宫"
+                                                                    ]
+                                                                  },
+                                                                  "\n                            \n                            ",
+                                                                  {
+                                                                    "tag": "li",
+                                                                    "attrs": {
+                                                                      "data-txt": "11"
+                                                                    },
+                                                                    "content": [
+                                                                      "幽篁国"
+                                                                    ]
+                                                                  },
+                                                                  "\n                            \n                        "
+                                                                ]
+                                                              },
+                                                              "\n                    "
+                                                            ]
+                                                          },
+                                                          "\n\n\t\t\t\t\t",
+                                                          {
+                                                            "tag": "label",
+                                                            "attrs": {
+                                                              "for": "sector"
+                                                            },
+                                                            "content": [
+                                                              "服务器:"
+                                                            ]
+                                                          },
+                                                          "\n\t\t\t\t\t",
+                                                          "<!--select name=\"sector\" id=\"sector\"></select-->",
+                                                          "\n                    ",
+                                                          {
+                                                            "tag": "div",
+                                                            "attrs": {
+                                                              "class": "select"
+                                                            },
+                                                            "content": [
+                                                              "\n                        ",
+                                                              {
+                                                                "tag": "div",
+                                                                "attrs": {
+                                                                  "class": "fdown"
+                                                                },
+                                                                "content": [
+                                                                  "\n                            ",
+                                                                  {
+                                                                    "tag": "p",
+                                                                    "attrs": {
+                                                                      "id": "sectTxt"
+                                                                    }
+                                                                  },
+                                                                  "\n                            ",
+                                                                  {
+                                                                    "tag": "a",
+                                                                    "attrs": {
+                                                                      "href": "javascript:void(0)"
+                                                                    }
+                                                                  },
+                                                                  "\n                        "
+                                                                ]
+                                                              },
+                                                              "\n                        ",
+                                                              {
+                                                                "tag": "ul",
+                                                                "attrs": {
+                                                                  "id": "sector"
+                                                                }
+                                                              },
+                                                              "\n                    "
+                                                            ]
+                                                          },
+                                                          "\n\t\t\t\t\t",
+                                                          "<!--select name=\"server\" id=\"server\"></select-->",
+                                                          "\n                    ",
+                                                          {
+                                                            "tag": "div",
+                                                            "attrs": {
+                                                              "class": "select"
+                                                            },
+                                                            "content": [
+                                                              "\n                        ",
+                                                              {
+                                                                "tag": "div",
+                                                                "attrs": {
+                                                                  "class": "fdown"
+                                                                },
+                                                                "content": [
+                                                                  "\n                            ",
+                                                                  {
+                                                                    "tag": "p",
+                                                                    "attrs": {
+                                                                      "id": "seleTxt"
+                                                                    }
+                                                                  },
+                                                                  "\n                            ",
+                                                                  {
+                                                                    "tag": "a",
+                                                                    "attrs": {
+                                                                      "href": "javascript:void(0)"
+                                                                    }
+                                                                  },
+                                                                  "\n                        "
+                                                                ]
+                                                              },
+                                                              "\n                        ",
+                                                              {
+                                                                "tag": "ul",
+                                                                "attrs": {
+                                                                  "id": "server"
+                                                                }
+                                                              },
+                                                              "\n                    "
+                                                            ]
+                                                          },
+                                                          "\n\n\t\t\t\t\t",
+                                                          {
+                                                            "tag": "input",
+                                                            "attrs": {
+                                                              "type": "submit",
+                                                              "value": "查询",
+                                                              "class": "btnSearch ml"
+                                                            }
+                                                          },
+                                                          "\n\t\t\t\t"
+                                                        ]
+                                                      },
+                                                      "\n\t\t\t\t",
+                                                      {
+                                                        "tag": "table",
+                                                        "attrs": {
+                                                          "width": "100%",
+                                                          "border": "0",
+                                                          "cellspacing": "0",
+                                                          "cellpadding": "0",
+                                                          "class": "table"
+                                                        },
+                                                        "content": [
+                                                          "\n\t\t\t\t\t",
+                                                          {
+                                                            "tag": "tr",
+                                                            "attrs": {
+                                                              "class": "trTop2"
+                                                            },
+                                                            "content": [
+                                                              "\n\t\t\t\t\t\t",
+                                                              {
+                                                                "tag": "td",
+                                                                "attrs": {
+                                                                  "class": "cl0"
+                                                                },
+                                                                "content": [
+                                                                  "排名"
+                                                                ]
+                                                              },
+                                                              "\n\t\t\t\t\t\t",
+                                                              {
+                                                                "tag": "td",
+                                                                "attrs": {
+                                                                  "class": "cl1"
+                                                                },
+                                                                "content": [
+                                                                  "角色"
+                                                                ]
+                                                              },
+                                                              "\n\t\t\t\t\t\t",
+                                                              {
+                                                                "tag": "td",
+                                                                "attrs": {
+                                                                  "class": "cl2"
+                                                                },
+                                                                "content": [
+                                                                  "大区"
+                                                                ]
+                                                              },
+                                                              "\n\t\t\t\t\t\t",
+                                                              {
+                                                                "tag": "td",
+                                                                "attrs": {
+                                                                  "class": "cl3"
+                                                                },
+                                                                "content": [
+                                                                  "服务器"
+                                                                ]
+                                                              },
+                                                              "\n\t\t\t\t\t\t",
+                                                              {
+                                                                "tag": "td",
+                                                                "attrs": {
+                                                                  "class": "cl4"
+                                                                },
+                                                                "content": [
+                                                                  "等级"
+                                                                ]
+                                                              },
+                                                              "\n\t\t\t\t\t\t",
+                                                              {
+                                                                "tag": "td",
+                                                                "attrs": {
+                                                                  "class": "cl5"
+                                                                },
+                                                                "content": [
+                                                                  "门派"
+                                                                ]
+                                                              },
+                                                              "\n\t\t\t\t\t\t",
+                                                              {
+                                                                "tag": "td",
+                                                                "attrs": {
+                                                                  "class": "cl6"
+                                                                },
+                                                                "content": [
+                                                                  "势力"
+                                                                ]
+                                                              },
+                                                              "\n\t\t\t\t\t\t",
+                                                              {
+                                                                "tag": "td",
+                                                                "attrs": {
+                                                                  "class": "cl7"
+                                                                },
+                                                                "content": [
+                                                                  "人物修为"
+                                                                ]
+                                                              },
+                                                              "\n\t\t\t\t\t\t",
+                                                              {
+                                                                "tag": "td",
+                                                                "attrs": {
+                                                                  "class": "cl8"
+                                                                },
+                                                                "content": [
+                                                                  "装备评价"
+                                                                ]
+                                                              },
+                                                              "\n\t\t\t\t\t\t",
+                                                              {
+                                                                "tag": "td",
+                                                                "attrs": {
+                                                                  "class": "cl9"
+                                                                },
+                                                                "content": [
+                                                                  "总修为"
+                                                                ]
+                                                              },
+                                                              "\n\t\t\t\t\t"
+                                                            ]
+                                                          },
+                                                          "\n\t\t\t\t\t\n\t\t\t\t"
+                                                        ]
+                                                      },
+                                                      "\n\t\t\t"
+                                                    ]
+                                                  },
+                                                  "\n\t\t\t",
+                                                  {
+                                                    "tag": "div",
+                                                    "attrs": {
+                                                      "class": "dPages"
+                                                    },
+                                                    "content": [
+                                                      "\n\t\t\t\t",
+                                                      {
+                                                        "tag": "a",
+                                                        "attrs": {
+                                                          "href": "/bang/ranks?school=4&role_id=&order_key=equ_xiuwei&server=%E9%80%90%E9%B9%BF%E4%B8%AD%E5%8E%9F&page=1&count=20"
+                                                        },
+                                                        "content": [
+                                                          "首页"
+                                                        ]
+                                                      },
+                                                      {
+                                                        "tag": "a",
+                                                        "attrs": {
+                                                          "href": "/bang/ranks?school=4&role_id=&order_key=equ_xiuwei&server=%E9%80%90%E9%B9%BF%E4%B8%AD%E5%8E%9F&page=25&count=20"
+                                                        },
+                                                        "content": [
+                                                          "上一页"
+                                                        ]
+                                                      },
+                                                      {
+                                                        "tag": "a",
+                                                        "attrs": {
+                                                          "href": "/bang/ranks?school=4&role_id=&order_key=equ_xiuwei&server=%E9%80%90%E9%B9%BF%E4%B8%AD%E5%8E%9F&page=22&count=20"
+                                                        },
+                                                        "content": [
+                                                          "22"
+                                                        ]
+                                                      },
+                                                      {
+                                                        "tag": "a",
+                                                        "attrs": {
+                                                          "href": "/bang/ranks?school=4&role_id=&order_key=equ_xiuwei&server=%E9%80%90%E9%B9%BF%E4%B8%AD%E5%8E%9F&page=23&count=20"
+                                                        },
+                                                        "content": [
+                                                          "23"
+                                                        ]
+                                                      },
+                                                      {
+                                                        "tag": "a",
+                                                        "attrs": {
+                                                          "href": "/bang/ranks?school=4&role_id=&order_key=equ_xiuwei&server=%E9%80%90%E9%B9%BF%E4%B8%AD%E5%8E%9F&page=24&count=20"
+                                                        },
+                                                        "content": [
+                                                          "24"
+                                                        ]
+                                                      },
+                                                      {
+                                                        "tag": "a",
+                                                        "attrs": {
+                                                          "href": "/bang/ranks?school=4&role_id=&order_key=equ_xiuwei&server=%E9%80%90%E9%B9%BF%E4%B8%AD%E5%8E%9F&page=25&count=20"
+                                                        },
+                                                        "content": [
+                                                          "25"
+                                                        ]
+                                                      },
+                                                      {
+                                                        "tag": "span",
+                                                        "attrs": {
+                                                          "class": "colRed"
+                                                        },
+                                                        "content": [
+                                                          "26"
+                                                        ]
+                                                      },
+                                                      "\n\t\t\t"
+                                                    ]
+                                                  },
+                                                  "\n\t\t"
+                                                ]
+                                              },
+                                              "\n\t"
+                                            ]
+                                          },
+                                          "\n"
+                                        ]
+                                      },
+                                      "\n\n\n\t\t\t\t\t\t\t\t\t",
+                                      {
+                                        "tag": "div",
+                                        "attrs": {
+                                          "id": "footer",
+                                          "class": "clear"
+                                        },
+                                        "content": [
+                                          "\n\t\t\t\t\t\t\t\t\t",
+                                          {
+                                            "tag": "div",
+                                            "attrs": {
+                                              "class": "copy-right"
+                                            },
+                                            "content": [
+                                              "\n\t\t\t\t\t\t\t\t\t\t",
+                                              {
+                                                "tag": "p",
+                                                "content": [
+                                                  "版本：476815"
+                                                ]
+                                              },
+                                              "\n\t\t\t\t\t\t\t\t\t"
+                                            ]
+                                          },
+                                          "\n                                    ",
+                                          {
+                                            "tag": "div",
+                                            "attrs": {
+                                              "class": "share-bg"
+                                            },
+                                            "content": [
+                                              "\n                                        ",
+                                              {
+                                                "tag": "div",
+                                                "attrs": {
+                                                  "id": "share"
+                                                }
+                                              },
+                                              "\n                                    "
+                                            ]
+                                          },
+                                          "\n                                        ",
+                                          {
+                                            "tag": "div",
+                                            "attrs": {
+                                              "id": "NIE-copyRight"
+                                            }
+                                          },
+                                          "\n\t\t\t\t\t\t\t\t\t"
+                                        ]
+                                      },
+                                      "\n\t\t\t\t\t\t\t\t"
+                                    ]
+                                  },
+                                  "\n\t\t\t\t\t\t\t"
+                                ]
+                              },
+                              "\n\t\t\t\t\t\t"
+                            ]
+                          },
+                          "\n\t\t\t\t\t"
+                        ]
+                      },
+                      "\n\t\t\t\t"
+                    ]
+                  },
+                  "\n\t\t\t"
+                ]
+              },
+              "\n\t\t"
+            ]
+          },
+          "\n\t\t\n\t\t\n\t\t",
+          {
+            "tag": "div",
+            "attrs": {
+              "id": "tooltip",
+              "class": "tooltip tx3TextBlock"
+            },
+            "content": [
+              "\n\t\t\t",
+              {
+                "tag": "div",
+                "attrs": {
+                  "id": "tooltip_title"
+                }
+              },
+              "\n\t\t\t",
+              {
+                "tag": "div",
+                "attrs": {
+                  "id": "tooltip_intro"
+                }
+              },
+              "\n\t\t"
+            ]
+          },
+          "\n\n\t\t        ",
+          "<!--右侧浮窗-->",
+          "\n        ",
+          {
+            "tag": "div",
+            "attrs": {
+              "class": "rnav"
+            },
+            "content": [
+              "\n            ",
+              {
+                "tag": "a",
+                "attrs": {
+                  "href": "javascript:;",
+                  "class": "closeb"
+                }
+              },
+              "\n            ",
+              {
+                "tag": "div",
+                "attrs": {
+                  "class": "dImg"
+                },
+                "content": [
+                  "\n                ",
+                  {
+                    "tag": "section",
+                    "attrs": {
+                      "class": "fSwitch"
+                    },
+                    "content": [
+                      "\n\t\t\t\t",
+                      "<!--\n                <iframe id=\"Jiframe_ban\" data-src=\"http://tx3.163.com/include/bang/banner.html?V=20150826\" style=\"display: none;\"></iframe>\n\t\t\t\t-->",
+                      "\n\t\t\t\t\t\t",
+                      {
+                        "tag": "div",
+                        "attrs": {
+                          "id": "bannews",
+                          "class": "img-list adbase-ctn"
+                        }
+                      },
+                      "\n\n                ",
+                      {
+                        "tag": "div",
+                        "attrs": {
+                          "class": "fSwitchPic"
+                        },
+                        "content": [
+                          "\n                    ",
+                          "<!-- <a href=\"#\" target=\"_blank\"><img src=\"http://img.nie.163.com/images/2014/2/10/2014-02-10_417869.jpg\" alt=\"哈哈哈哈啊\"/></a> -->",
+                          " \n                "
+                        ]
+                      },
+                      "\n                ",
+                      {
+                        "tag": "div",
+                        "attrs": {
+                          "class": "fSwitchNav"
+                        }
+                      },
+                      "\n                "
+                    ]
+                  },
+                  "\n            "
+                ]
+              },
+              "\n            ",
+              {
+                "tag": "div",
+                "attrs": {
+                  "class": "newBox"
+                },
+                "content": [
+                  "\n                ",
+                  {
+                    "tag": "div",
+                    "attrs": {
+                      "class": "fTitle clear"
+                    },
+                    "content": [
+                      "\n                    ",
+                      {
+                        "tag": "h3",
+                        "content": [
+                          "天下热闻"
+                        ]
+                      },
+                      "<!--  <a href=\"javascript:;\" class=\"more\"></a> -->",
+                      "\n                "
+                    ]
+                  },
+                  "\n                ",
+                  {
+                    "tag": "iframe",
+                    "attrs": {
+                      "id": "Jiframe_hot",
+                      "data-src": "http://tx3.163.com/include/bang/hotnew.html?V=2",
+                      "style": "display: none;"
+                    }
+                  },
+                  "\n                ",
+                  {
+                    "tag": "div",
+                    "attrs": {
+                      "class": "newscon"
+                    },
+                    "content": [
+                      "\n                    ",
+                      {
+                        "tag": "ul",
+                        "attrs": {
+                          "class": "fListWrap clear"
+                        },
+                        "content": [
+                          "\n                        ",
+                          "<!-- <li><a href=\"#\" target=\"_blank\">金钱产出增加新途径 大话2游戏处处有钱拿金钱产出增加新途径 大话2游戏处处有钱拿</a><span>[01-27]</span></li>\n                        -->",
+                          "\n                    "
+                        ]
+                      },
+                      "\n                "
+                    ]
+                  },
+                  "\n                ",
+                  {
+                    "tag": "div",
+                    "attrs": {
+                      "class": "hd"
+                    }
+                  },
+                  "\n\n            "
+                ]
+              },
+              "\n            ",
+              {
+                "tag": "div",
+                "attrs": {
+                  "class": "newShow"
+                },
+                "content": [
+                  "\n                ",
+                  {
+                    "tag": "div",
+                    "attrs": {
+                      "class": "fTitle clear"
+                    },
+                    "content": [
+                      "\n                    ",
+                      {
+                        "tag": "h3",
+                        "content": [
+                          "玩家秀"
+                        ]
+                      },
+                      "<!--  <a href=\"javascript:;\" class=\"more\"></a> -->",
+                      "\n                "
+                    ]
+                  },
+                  "\n                ",
+                  {
+                    "tag": "iframe",
+                    "attrs": {
+                      "id": "Jiframe_show",
+                      "data-src": "http://tx3.163.com/include/bang/shownew.html?V=2",
+                      "style": "display: none;"
+                    }
+                  },
+                  "\n                ",
+                  {
+                    "tag": "div",
+                    "attrs": {
+                      "class": "piccon"
+                    },
+                    "content": [
+                      "\n                    ",
+                      {
+                        "tag": "ul",
+                        "attrs": {
+                          "class": "fListShow clear"
+                        },
+                        "content": [
+                          "\n                       ",
+                          "<!-- <li><a href=\"#\" target=\"_blank\"><img src=\"http://img.nie.163.com/images/2014/2/10/2014-02-10_417869.jpg\" alt=\"哈哈哈哈啊\"/><span>玩家ID</span></a></li>\n                       <li><a href=\"#\" target=\"_blank\"><img src=\"http://img.nie.163.com/images/2014/2/10/2014-02-10_417869.jpg\" alt=\"哈哈哈哈啊\"/><span>玩家ID</span></a></li>\n                       <li><a href=\"#\" target=\"_blank\"><img src=\"http://img.nie.163.com/images/2014/2/10/2014-02-10_417869.jpg\" alt=\"哈哈哈哈啊\"/><span>玩家ID</span></a></li> -->",
+                          "\n                        \n                    "
+                        ]
+                      },
+                      "\n                "
+                    ]
+                  },
+                  "\n\n            "
+                ]
+              },
+              "\n        "
+            ]
+          },
+          "\n        ",
+          {
+            "tag": "div",
+            "attrs": {
+              "class": "rnav_s"
+            },
+            "content": [
+              "\n            ",
+              {
+                "tag": "div",
+                "attrs": {
+                  "class": "hotcon"
+                },
+                "content": [
+                  "\n                ",
+                  {
+                    "tag": "a",
+                    "attrs": {
+                      "href": "#",
+                      "target": "_blank"
+                    },
+                    "content": [
+                      "金钱产出增加新途径 大话2游戏处处有钱拿金钱产出增加新途径 大话2游戏处处有钱拿"
+                    ]
+                  },
+                  "\n            "
+                ]
+              },
+              "   \n            ",
+              {
+                "tag": "div",
+                "attrs": {
+                  "class": "hotbtn"
+                },
+                "content": [
+                  "\n                \n            "
+                ]
+              },
+              " \n        "
+            ]
+          },
+          "\n\n\n\t\t",
+          {
+            "tag": "script",
+            "attrs": {
+              "charset": "gb2312",
+              "src": "http://res.nie.netease.com/comm/js/jquery(mixNIE).last.js?v=20200610181854"
+            }
+          },
+          "\n\n        ",
+          {
+            "tag": "script",
+            "attrs": {
+              "type": "text/javascript",
+              "src": "/js/servers.js"
+            }
+          },
+          "\n        ",
+          "<!-- script type=\"text/javascript\" src=\"http://res.tx3.netease.com/qt/2015/bangv1/neiye/js/comv2.js?v=20200610181854\"></script-->",
+          "\n\t\t",
+          {
+            "tag": "script",
+            "attrs": {
+              "type": "text/javascript",
+              "src": "http://res.tx3.netease.com/pc/qt/20151231153005/js/app/comv2_807873e.js?v=20200610181854"
+            }
+          },
+          "\n        ",
+          {
+            "tag": "script",
+            "attrs": {
+              "type": "text/javascript",
+              "src": "/js/search.js"
+            }
+          },
+          "\n        ",
+          {
+            "tag": "script",
+            "attrs": {
+              "type": "text/javascript",
+              "src": "/js/utils.js"
+            }
+          },
+          "\n\t\t",
+          {
+            "tag": "script",
+            "attrs": {
+              "type": "text/javascript"
+            },
+            "content": [
+              "\n\t\t\t/* 下位导航for all */\n\t\t\tbang.navSeletor();\n\t\t\tvar url_root = '/';\n\t\t"
+            ]
+          },
+          "\n\n\t\t\n",
+          "<!--script type=\"text/javascript\" src=\"http://bang.tx3.163.com/js/servers.js?v=20200610181854\"></script-->",
+          "\n",
+          "<!--script type=\"text/javascript\" src=\"/js/ranks.js\"></script-->",
+          "\n",
+          {
+            "tag": "script",
+            "attrs": {
+              "type": "text/javascript"
+            },
+            "content": [
+              "\n$(function(){\n    var g_fields = [\"order_key\", \"school\", \"sector\", \"server\"];\n    $.each(g_fields, function(i, f){\n        $('#' + f).find('li').each(function(){\n            if($(this).attr('data-txt') == $('input[name=' + f+ ']').val()){\n                $(this).click();\n            };\n        });\n    });\n    \n    $('#query_form').submit(function(){\n        $.each(g_fields, function(i, f){\n            $('#' + f).find('li').each(function(){\n                if($(this).hasClass('active')){\n                    $('input[name=' + f+ ']').val($(this).attr('data-txt'));\n                }\n            });\n        });\n    });\n});\n"
+            ]
+          },
+          "\n\n\t"
+        ]
+      },
+      "\n"
+    ]
+  }
+]
