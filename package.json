@@ -24,9 +24,8 @@
     "@types/node": "^14.0.14",
     "@types/underscore": "^1.10.2",
     "axios": "^0.19.2",
-    "domhandler": "^3.0.0",
-    "htmlparser2": "^4.1.0",
     "posthtml-parser": "^0.4.2",
+    "querystring": "^0.2.0",
     "typescript": "^3.9.5",
     "underscore": "^1.10.2"
   }
