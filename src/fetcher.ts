@@ -45,7 +45,7 @@ export class Tx3Fetcher {
 	async initProxies() {
 		await this.proxyFetcher.initProxies();
 	}
-	async fetch(): Promise<Map<string, User[]>> {
+	async fetchAll(): Promise<Map<string, User[]>> {
 		const res = new Map<string, User[]>();
 		const userLists = await Promise.all(servers.map(server => this.fetchUsersFromServer(server)));
 		for (let i = 1; i < userLists.length; ++i){
@@ -54,33 +54,28 @@ export class Tx3Fetcher {
 		return res;
 	}
 	async fetchUsersFromServer(server: string): Promise<User[]> {
-		const userList = await this.fetchListFromServer(server);
-		return await Promise.all(userList.map(r => this.fetchUser(r)));
-	}
-	async fetchListFromServer(server: string): Promise<PlayerRow[]> {
 		console.log(`Fetching user list from server ${server}.`);
-		const resPromises: Promise<PlayerRow[]>[] = [];
+		const resPromises: Promise<User[]>[] = [];
 		for (let school = 1; school < 12; ++school) {
-			resPromises.push(this.fetchListFromSchoolAndServer(school, server));
+			resPromises.push(this.fetchUsersFromSchoolAndServer(school, server));
 		}
 		const result = _.flatten(await Promise.all(resPromises));
 		console.log(`Fetched user list with ${result.length} users from server ${server}.`);
 		return result;
 	}
-	async fetchListFromSchoolAndServer(school: number, server: string): Promise<PlayerRow[]> {
-		console.log(`Fetching user list from server ${server} with school ${school}.`);
-		const res: PlayerRow[][] = [];
+	async fetchUsersFromSchoolAndServer(school: number, server: string): Promise<User[]> {
+		console.log(`Fetching users from server ${server} with school ${school}.`);
+		const res: User[][] = [];
 		for (let page = 1; page <= 25; ++page) {
-			const list = await this.fetchUserList(school, server, page);
+			const list = await this.fetchUsers(school, server, page);
 			if (!list.length) {
-				console.log(`User list from server ${server} with school ${school} page ${page} is blank.`);
 				break;
 			}
 			res.push(list);
 		}
 		return _.flatten(res);
 	}
-	async fetchUserList(school: number, server: string, page: number): Promise<PlayerRow[]> {
+	async fetchUsers(school: number, server: string, page: number): Promise<User[]> {
 		console.log(`Fetching user list from server ${server} with school ${school} page ${page}.`);
 		try { 
 			const content: string = await this.proxyFetcher.getWithProxy(`http://bang.tx3.163.com/bang/ranks`, {
@@ -96,7 +91,8 @@ export class Tx3Fetcher {
 					return qs.stringify(params);
 				}
 			});
-			return parsePlayerRows(content);
+			const playerRows = parsePlayerRows(content);
+			return await Promise.all(playerRows.map(row => this.fetchUser(row)));
 		} catch(e) {
 			console.error(`Errored fetching user list with params ${school} ${server} ${page}}: ${e.toString()}`);
 			return [];
