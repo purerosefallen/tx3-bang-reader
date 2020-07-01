@@ -8,6 +8,24 @@ for (let i = 1; i <= 2000; ++i) {
 	proxySourceList.push(`http://www.xiladaili.com/http/${i}/`);
 }
 
+async function checkProxy(proxy: AxiosProxyConfig) {
+	let isProxyUsable = false;
+	try {
+		await axios.get("http://mirrors.aliyun.com/debian/pool", { proxy });
+		isProxyUsable = true;
+	} catch (e) {
+		console.error(`Proxy ${proxy.host} is broken: ${e.toString()}`);
+	}
+	return isProxyUsable;
+}
+
+async function filterProxies(proxies: AxiosProxyConfig[]) {
+	const proxiesUsableList = await Promise.all(proxies.map(checkProxy));
+	return proxies.filter((proxy, index) => {
+		return proxiesUsableList[index];
+	});
+}
+
 export class ProxyFetcher {
 	proxies: AxiosProxyConfig[];
 	counter: number;
@@ -19,36 +37,31 @@ export class ProxyFetcher {
 		if (process.env.NO_PROXY) {
 			return;
 		}
+		console.log(`Fetching proxies from ${url}.`)
 		//while (true) {
-			try {
-				const proxyPage: string = (await axios.get(url, {
-					responseType: "document"
-				})).data;
-				const proxyMatches: string[] = proxyPage.match(/\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}:\d{1,5}/g);
-				for (let proxyString of proxyMatches) {
-					const [host, _port] = proxyString.split(":");
-					const port = parseInt(_port);
-					const proxy = { host, port };
-					let isProxyUsable = false;
-					try { 
-						await axios.get("http://mirrors.aliyun.com/debian/pool", { proxy });
-						isProxyUsable = true;
-					} catch (e) {
-						console.error(`Proxy ${proxyString} is broken: ${e.toString()}`);
-					}
-					if (isProxyUsable) {
-						this.proxies.push(proxy);
-					}
-				}
-				console.error(`Got ${proxyMatches.length} proxies from ${url}.`);
-				return;
-			} catch (e) {
-				console.error(`Failed fetching proxy list from ${url}: ${e.toString()}`)
+		try {
+			const proxyPage: string = (await axios.get(url, {
+				responseType: "document"
+			})).data;
+			const proxies: AxiosProxyConfig[] = proxyPage.match(/\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}:\d{1,5}/g).map(proxyString => {
+				const [host, _port] = proxyString.split(":");
+				const port = parseInt(_port);
+				const proxy = { host, port };
+				return proxy;
+			});
+			const usableProxies = await filterProxies(proxies);
+			for (let proxy of usableProxies) {
+				this.proxies.push(proxy);
 			}
+			console.error(`Got ${usableProxies.length} proxies from ${url}.`);
+			return;
+		} catch (e) {
+			console.error(`Failed fetching proxy list from ${url}: ${e.toString()}`)
+		}
 		//}
 	}
 	async initProxies() {
-		await Promise.race(["http://www.89ip.cn/tqdl.html?api=1&num=9999", "http://www.66ip.cn/mo.php?tqsl=9999"].map((m) => {
+		await Promise.race(proxySourceList.map((m) => {
 			return this.initProxiesFrom(m);
 		}));
 	}
