@@ -8,6 +8,9 @@ export class ProxyFetcher {
 		this.counter = 0;
 	}
 	async initProxiesFrom(url: string) {
+		if (process.env.NO_PROXY) {
+			return;
+		}
 		while (true) {
 			try {
 				const proxyPage: string = (await axios.get(url, {
@@ -33,19 +36,25 @@ export class ProxyFetcher {
 	}
 	async getWithProxy(url: string, options: AxiosRequestConfig) {
 		while (true) {
-			if (!this.proxies.length) {
+			if (!process.env.NO_PROXY && !this.proxies.length) {
 				await this.initProxies();
 			}
-			const proxyIndex = (++this.counter) % this.proxies.length;
-			const proxy = this.proxies[proxyIndex];
+			const proxyIndex = process.env.NO_PROXY ? null : (++this.counter) % this.proxies.length;
+			const proxy = process.env.NO_PROXY ? null : this.proxies[proxyIndex];
 			try {
 				const data = (await axios.get(url, {
 					proxy,
+					headers: {
+						"User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:77.0) Gecko/20100101 Firefox/77.0"
+					},
+					timeout: 5000,
 					...options
 				})).data;
 				return data;
 			} catch (e) {
-				this.proxies.splice(proxyIndex, 1);
+				if (!process.env.NO_PROXY) {
+					this.proxies.splice(proxyIndex, 1);
+				}
 				console.error(`Failed fetching data from ${url}: ${e.toString()}`)
 			}
 		}
