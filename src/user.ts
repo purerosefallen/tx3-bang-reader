@@ -82,7 +82,38 @@ function getNumber(node: HTML.Node) {
 	}
 }
 
+interface AttackAttribute {
+	'攻力': number,
+	'命中': number,
+	'法力': number,
+	'重击': number,
+	'会心一击': number,
+	'附加伤害': number
+}
+
+interface DefenseAttribute {
+	'防御': number,
+	'回避': number,
+	'法防': number,
+	'神明': number,
+	'化解': number,
+	'知彼': number
+}
+
+interface SpecialAttribute {
+	'身法': number,
+	'坚韧': number,
+	'定力': number,
+	'诛心': number,
+	'御心': number,
+	'万钧': number,
+	'铁壁': number
+}
+
+interface AdvancedAttribute { '追电': number, '骤雨': number, '疾语': number, '明思': number, '扰心': number, '人祸': number }
+
 export class User {
+	id: string;
 	content: HTML.Tree;
 	name: string;
 	category: string;
@@ -109,10 +140,15 @@ export class User {
 	ji: number;
 	hun: number;
 	nian: number;
+	attackAttributes: AttackAttribute;
+	defenseAttributes: DefenseAttribute;
+	specialAttributes: SpecialAttribute;
+	advancedAttributes: AdvancedAttribute;
+	yhz: string[];
 	getContinuousData(_pos: number[], moveOffset: number, step: number, dataCount: number): number[] {
 		const pos = _.clone(_pos);
 		const datas: number[] = [];
-		for (let i = 0; i < dataCount; ++i) { 
+		for (let i = 0; i < dataCount; ++i) {
 			const node = getDepthOfTree(this.content, pos)[0];
 			datas.push(getNumber(node))
 			pos[pos.length - (moveOffset + 1)] += step;
@@ -155,9 +191,22 @@ export class User {
 		this.qhLevel = datas[6];
 		this.tlPoints = datas[7];
 	}
+	parseAttributeTable(_pos: number[]): any {
+		const ret = {};
+		const pos = _.clone(_pos);
+		const tree = getDepthOfTree(this.content, pos);
+		for (let i = 3; i < tree.length; i += 2) {
+			const [_keyNode, valueNode] = getDepthOfTree(tree, [i]);
+			const keyNode = (_keyNode as HTML.NodeTag);
+			const key = keyNode.content[0] as string;
+			const value = getNumber(valueNode);
+			ret[key] = value;
+		}
+		return ret;
+	}
 	parseBasicAttributes() {
 		let ValuePos = findNodeIndexByContent(this.content, "命", []);
-		ValuePos.pop()
+		ValuePos.pop();
 		ValuePos[ValuePos.length - 1] += 2;
 		const datas = this.getContinuousData(ValuePos, 0, 4, 8);
 		this.hp = datas[0];
@@ -168,13 +217,36 @@ export class User {
 		this.ji = datas[5];
 		this.hun = datas[6];
 		this.nian = datas[7];
+
+		ValuePos.pop();
+		ValuePos[ValuePos.length - 1] += 2;
+		this.attackAttributes = this.parseAttributeTable(ValuePos) as AttackAttribute;
+		ValuePos[ValuePos.length - 1] += 2;
+		this.defenseAttributes = this.parseAttributeTable(ValuePos) as DefenseAttribute;
+		ValuePos[ValuePos.length - 1] += 2;
+		ValuePos.push(1);
+		this.specialAttributes = this.parseAttributeTable(ValuePos) as SpecialAttribute;
+		ValuePos[ValuePos.length - 1] += 2;
+		this.advancedAttributes = this.parseAttributeTable(ValuePos) as AdvancedAttribute;
+	}
+	parseYHZ() {
+		let ValuePos = findNodeIndexByAttribute(this.content, "id", "tableYHZ", []);
+		ValuePos.push(1);
+		const tree = getDepthOfTree(this.content, ValuePos);
+		this.yhz = [];
+		for (let i = 1; i < tree.length; i += 2){
+			const node = (tree[i] as HTML.NodeTag);
+			this.yhz.push(node.content[0] as string);
+		}
 	}
 	parse() {
 		this.parseMetadata();
 		this.parseEquipmentData();
 		this.parseBasicAttributes();
+		this.parseYHZ();
 	}
-	constructor(content: string) {
+	constructor(id: string, content: string) {
+		this.id = id;
 		this.content = HTML(content);
 		this.parse();
 		this.content = null;
