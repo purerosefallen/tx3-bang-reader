@@ -19,6 +19,10 @@ async function main() {
 		});
 	}
 	await fetcher.initProxies();
+	if (process.env.SERVER) {
+		await runServer(process.env.SERVER);
+		return;
+	}
 	const userListWithServer = await Promise.all(servers.map(runServer));
 	const allServersList: any = {};
 	for (let i = 0; i < servers.length;++i) {
