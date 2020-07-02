@@ -32,5 +32,6 @@ async function main() {
 		allServersList[servers[i]] = userListWithServer[i];
 	}
 	await fs.promises.writeFile(`./output/all.json`, JSON.stringify(allServersList, null, 2));
+	process.exit();
 }
 main();
