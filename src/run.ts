@@ -27,17 +27,18 @@ async function main() {
 	await fetcher.init();
 	if (config.server) {
 		await Promise.all(config.server.map(runServer));
-		return;
+	} else {
+		const userListWithServer = await Promise.all(servers.map(runServer));
+		const allServersList: any = {};
+		for (let i = 0; i < servers.length;++i) {
+			allServersList[servers[i]] = userListWithServer[i];
+		}
+		await fs.promises.writeFile(`./output/all.json`, JSON.stringify({
+			date: fetcher.date,
+			data: allServersList
+		}, null, 2));
 	}
-	const userListWithServer = await Promise.all(servers.map(runServer));
-	const allServersList: any = {};
-	for (let i = 0; i < servers.length;++i) {
-		allServersList[servers[i]] = userListWithServer[i];
-	}
-	await fs.promises.writeFile(`./output/all.json`, JSON.stringify({
-		date: fetcher.date,
-		data: allServersList
-	}, null, 2));
+	console.log("Finished.");
 	process.exit();
 }
 main();
