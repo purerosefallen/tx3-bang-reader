@@ -1,14 +1,18 @@
 import axios, { AxiosProxyConfig, AxiosRequestConfig } from "axios";
 
-const NO_PROXY = true;
-
-const proxySourceList = [
-	"http://www.89ip.cn/tqdl.html?api=1&num=9999", "http://www.66ip.cn/mo.php?tqsl=9999"
-]
+//const proxySourceList = [
+//	"http://www.89ip.cn/tqdl.html?api=1&num=9999", "http://www.66ip.cn/mo.php?tqsl=9999"
+//]
 
 //for (let i = 1; i <= 2000; ++i) {
 //	proxySourceList.push(`http://www.xiladaili.com/http/${i}`);
 //}
+
+export interface ProxyConfig {
+	useProxy: boolean,
+	proxySource: string[],
+	timeout: number
+}
 
 const agentList = [
 	'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_8; en-us) AppleWebKit/534.50 (KHTML, like Gecko) Version/5.1 Safari/534.50',
@@ -36,7 +40,7 @@ async function testProxy(proxy: AxiosProxyConfig) {
 		headers: {
 			"User-Agent": agentList[4]
 		},
-		timeout: 1000,
+		timeout: this.config.timeout,
 	});
 	return proxy;
 }
@@ -67,12 +71,14 @@ async function filterProxies(proxies: AxiosProxyConfig[]) {
 export class ProxyFetcher {
 	proxies: AxiosProxyConfig[];
 	counter: number;
-	constructor() {
+	config: ProxyConfig;
+	constructor(config: ProxyConfig) {
+		this.config = config;
 		this.proxies = [];
 		this.counter = 0;
 	}
 	async initProxiesFrom(url: string) {
-		if (NO_PROXY) {
+		if (!this.config.useProxy) {
 			return;
 		}
 		console.log(`Fetching proxies from ${url}.`)
@@ -99,30 +105,30 @@ export class ProxyFetcher {
 		}
 	}
 	async initProxies() {
-		await Promise.all(proxySourceList.map((m) => {
+		await Promise.all(this.config.proxySource.map((m) => {
 			return this.initProxiesFrom(m);
 		}));
 	}
 	async getWithProxy(url: string, options: AxiosRequestConfig) {
 		while (true) {
-			if (!NO_PROXY && !this.proxies.length) {
+			if (this.config.useProxy && !this.proxies.length) {
 				await this.initProxies();
 			}
-			const proxyIndex = NO_PROXY ? null : (++this.counter) % this.proxies.length;
+			const proxyIndex = !this.config.useProxy ? null : (++this.counter) % this.proxies.length;
 			//const proxyIndex = 0;
-			const proxy = NO_PROXY ? null : this.proxies[proxyIndex];
+			const proxy = !this.config.useProxy ? null : this.proxies[proxyIndex];
 			try {
 				const data = (await axios.get(url, {
 					proxy,
 					headers: {
 						"User-Agent": agentList[this.counter % agentList.length]
 					},
-					timeout: 30000,
+					timeout: this.config.timeout,
 					...options
 				})).data;
 				return data;
 			} catch (e) {
-				if (!NO_PROXY) {
+				if (this.config.useProxy) {
 					this.proxies.splice(proxyIndex, 1);
 				}
 				console.error(`Failed fetching data from ${url}: ${e.toString()} ${this.proxies.length} proxies left.`)

@@ -2,7 +2,7 @@
   "name": "tx3-bang-reader",
   "version": "1.0.0",
   "description": "Read TX3 bang and parse it",
-  "main": "build/run.js",
+  "main": "build/fetcher.js",
   "scripts": {
     "build": "./node_modules/.bin/tsc",
     "fetch": "node build/src/run.js"
@@ -23,10 +23,15 @@
   "dependencies": {
     "@types/node": "^14.0.14",
     "@types/underscore": "^1.10.2",
+    "@types/yaml": "^1.9.7",
     "axios": "^0.19.2",
+    "moment": "^2.27.0",
+    "mysql-promise": "^5.0.0",
     "posthtml-parser": "^0.4.2",
+    "promise-mysql": "^4.1.3",
     "querystring": "^0.2.0",
     "typescript": "^3.9.5",
-    "underscore": "^1.10.2"
+    "underscore": "^1.10.2",
+    "yaml": "^1.10.0"
   }
 }

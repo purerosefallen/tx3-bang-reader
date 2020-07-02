@@ -1,9 +1,11 @@
 import axios from "axios";
 import _ from "underscore";
 import { User } from "./user";
-import { ProxyFetcher } from "./proxy";
+import {ProxyConfig, ProxyFetcher} from "./proxy";
 import { PlayerRow, parsePlayerRows } from "./playerlist";
 import qs from "querystring";
+import mysql from "promise-mysql";
+import moment from "moment";
 
 export const servers = [
 	"东方明珠",
@@ -37,13 +39,45 @@ export const servers = [
 	"锦绣花朝"
 ]
 
+export interface Config {
+	outDir: string;
+	useMySQL: boolean,
+	MySQLConfig: mysql.PoolConfig,
+	proxy: ProxyConfig
+}
 export class Tx3Fetcher {
+	config: Config;
 	proxyFetcher: ProxyFetcher;
-	constructor() {
-		this.proxyFetcher = new ProxyFetcher();
+	db: mysql.Pool;
+	curDate: string;
+	constructor(config: Config) {
+		this.config = config;
+		this.proxyFetcher = new ProxyFetcher(config.proxy);
 	}
-	async initProxies() {
-		await this.proxyFetcher.initProxies();
+	async init() {
+		this.curDate = moment().format("YYYY-MM-DD");
+		if(this.config.useMySQL) {
+			this.db = await mysql.createPool(this.config.MySQLConfig);
+			await this.db.query("CREATE TABLE IF NOT EXISTS `userdata` (\n" +
+				"  `id` bigint(20) NOT NULL AUTO_INCREMENT,\n" +
+				"  `date` date NOT NULL DEFAULT current_timestamp(),\n" +
+				"  `url` varchar(50) COLLATE utf8_unicode_ci NOT NULL,\n" +
+				"  `rank` int(11) UNSIGNED NOT NULL,\n" +
+				"  `name` varchar(7) COLLATE utf8_unicode_ci NOT NULL,\n" +
+				"  `category` varchar(5) COLLATE utf8_unicode_ci NOT NULL,\n" +
+				"  `serverArea` varchar(4) COLLATE utf8_unicode_ci NOT NULL,\n" +
+				"  `server` varchar(4) COLLATE utf8_unicode_ci NOT NULL,\n" +
+				"  `level` tinyint(4) UNSIGNED NOT NULL,\n" +
+				"  `region` varchar(7) COLLATE utf8_unicode_ci,\n" +
+				"  `score` int(11) UNSIGNED NOT NULL,\n" +
+				"  `equip` int(11) UNSIGNED NOT NULL,\n" +
+				"  `totalScore` int(11) UNSIGNED NOT NULL,\n" +
+				"  PRIMARY KEY (`id`)\n" +
+				") ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci");
+		}
+		if(this.config.proxy.useProxy) {
+			await this.proxyFetcher.initProxies();
+		}
 	}
 	async fetchAll(): Promise<Map<string, User[]>> {
 		const res = new Map<string, User[]>();
@@ -118,6 +152,12 @@ export class Tx3Fetcher {
 				}
 			});
 			const playerRows = parsePlayerRows(content);
+			if(this.db) {
+				await Promise.all(playerRows.map(m => this.db.query("insert into userdata set ?", {
+					date: this.curDate,
+					...m
+				})));
+			}
 			return playerRows;
 		} catch(e) {
 			console.error(`Errored fetching user list with params ${school} ${server} ${page}}: ${e.toString()}`);

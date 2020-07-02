@@ -1,8 +1,9 @@
-import { Tx3Fetcher, servers } from "./fetcher";
+import {Tx3Fetcher, servers, Config} from "./fetcher";
 import fs from "fs";
 import _ from "underscore";
+import yaml from "yaml";
 
-const fetcher = new Tx3Fetcher();
+let fetcher;
 
 async function runServer(server: string) {
 	const users = await fetcher.fetchListFromServer(server);
@@ -18,7 +19,9 @@ async function main() {
 			recursive: true
 		});
 	}
-	await fetcher.initProxies();
+	const config: Config = yaml.parse(await fs.promises.readFile("./config.yaml", "utf8"));
+	fetcher = new Tx3Fetcher(config);
+	await fetcher.init();
 	if (process.env.SERVER) {
 		await runServer(servers[parseInt(process.env.SERVER)]);
 		return;
