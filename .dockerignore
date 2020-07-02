@@ -110,3 +110,4 @@ dist
 .dockerignore
 Dockerfile
 .gitlab-ci.yml
+/config.yaml
