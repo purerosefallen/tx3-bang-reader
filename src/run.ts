@@ -7,7 +7,10 @@ let fetcher;
 
 async function runServer(server: string) {
 	const users = await fetcher.fetchListFromServer(server);
-	await fs.promises.writeFile(`./output/servers/${server}.json`, JSON.stringify(users, null, 2));
+	await fs.promises.writeFile(`./output/servers/${server}.json`, JSON.stringify({
+		date: fetcher.date,
+		data: users
+	}, null, 2));
 	return users;
 }
 
@@ -22,8 +25,8 @@ async function main() {
 	const config: Config = yaml.parse(await fs.promises.readFile("./config.yaml", "utf8"));
 	fetcher = new Tx3Fetcher(config);
 	await fetcher.init();
-	if (process.env.SERVER) {
-		await runServer(servers[parseInt(process.env.SERVER)]);
+	if (config.server) {
+		await Promise.all(config.server.map(runServer));
 		return;
 	}
 	const userListWithServer = await Promise.all(servers.map(runServer));
@@ -31,7 +34,10 @@ async function main() {
 	for (let i = 0; i < servers.length;++i) {
 		allServersList[servers[i]] = userListWithServer[i];
 	}
-	await fs.promises.writeFile(`./output/all.json`, JSON.stringify(allServersList, null, 2));
+	await fs.promises.writeFile(`./output/all.json`, JSON.stringify({
+		date: fetcher.date,
+		data: allServersList
+	}, null, 2));
 	process.exit();
 }
 main();

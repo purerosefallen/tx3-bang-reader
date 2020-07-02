@@ -1,5 +1,6 @@
 outDir: ./output
 useMySQL: false
+server: null # server name array if specific servers
 MySQLConfig:
   host: mysql
   user: tx3

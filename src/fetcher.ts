@@ -41,6 +41,7 @@ export const servers = [
 
 export interface Config {
 	outDir: string;
+	server: string[];
 	useMySQL: boolean,
 	MySQLConfig: mysql.PoolConfig,
 	proxy: ProxyConfig
