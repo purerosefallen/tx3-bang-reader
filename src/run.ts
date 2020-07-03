@@ -53,7 +53,7 @@ async function run() {
 async function main() {
 	await loadConfig();
 	if (process.argv[2] === "cron") {
-		const job = new CronJob("0 0 1 * * *", run, null, true, "Asia/Shanghai");
+		const job = new CronJob(config.cronString, run, null, true, "Asia/Shanghai", null, true);
 		job.start();
 	} else {
 		await run();

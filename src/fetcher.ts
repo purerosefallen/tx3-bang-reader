@@ -44,7 +44,8 @@ export interface Config {
 	server: string[];
 	useMySQL: boolean,
 	MySQLConfig: mysql.PoolConfig,
-	proxy: ProxyConfig
+	proxy: ProxyConfig,
+	cronString: string;
 }
 export class Tx3Fetcher {
 	config: Config;
@@ -56,12 +57,12 @@ export class Tx3Fetcher {
 		this.proxyFetcher = new ProxyFetcher(config.proxy);
 	}
 	async init() {
-		this.curDate = moment().format("YYYY-MM-DD");
+		this.curDate = moment().format("YYYY-MM-DD HH:mm:ss");
 		if(this.config.useMySQL) {
 			this.db = await mysql.createPool(this.config.MySQLConfig);
 			await this.db.query("CREATE TABLE IF NOT EXISTS `userdata` (\n" +
 				"  `id` bigint(20) NOT NULL AUTO_INCREMENT,\n" +
-				"  `date` date NOT NULL DEFAULT current_timestamp(),\n" +
+				"  `date` datetime NOT NULL DEFAULT current_timestamp(),\n" +
 				"  `url` varchar(50) COLLATE utf8_unicode_ci NOT NULL,\n" +
 				"  `rank` int(11) UNSIGNED NOT NULL,\n" +
 				"  `name` varchar(7) COLLATE utf8_unicode_ci NOT NULL,\n" +
@@ -76,7 +77,7 @@ export class Tx3Fetcher {
 				"  PRIMARY KEY (`id`)\n" +
 				") ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci");
 			console.log(`Removing existing records of ${this.curDate}.`);
-			await this.db.query("delete from userdata where date = ?", this.curDate);
+			//await this.db.query("delete from userdata where date = ?", this.curDate);
 		}
 		if(this.config.proxy.useProxy) {
 			await this.proxyFetcher.initProxies();
@@ -140,6 +141,20 @@ export class Tx3Fetcher {
 		console.log(`Fetched users from server ${server} with school ${school}.`);
 		return ret;
 	}
+	async checkAddRecord(row: PlayerRow) {
+		const latestRows = await this.db.query("select url,rank,name,category,serverArea,server,level,region,score,equip,totalScore from userdata where url = ? order by date desc limit 1", row.url);
+		if (latestRows.length) {
+			const lrow = latestRows[0];
+			if (_.every(["name", "category", "serverArea", "server", "level", "region", "score", "equip", "totalScore"], field => lrow[field] === row[field])) {
+				return;
+			}
+		}
+		console.log(`Player ${row.name} from ${row.server} has changes. Writing record to database.`);
+		await this.db.query("insert into userdata set ?", {
+			date: this.curDate,
+			...row
+		});
+	}
 	async fetchList(school: number, server: string, page: number): Promise<PlayerRow[]> {
 		console.log(`Fetching user list from server ${server} with school ${school} page ${page}.`);
 		try { 
@@ -160,10 +175,7 @@ export class Tx3Fetcher {
 			console.log(`Fetched user list from server ${server} with school ${school} page ${page}. ${playerRows.length} users found.`);
 			if (this.db) {
 				//await Promise.all(playerRows.map(m => this.db.query("delete from userdata where url = ? and date = ?", [m.url, this.curDate])));
-				await Promise.all(playerRows.map(m => this.db.query("insert into userdata set ?", {
-					date: this.curDate,
-					...m
-				})));
+				await Promise.all(playerRows.map(m => this.checkAddRecord(m)));
 			}
 			return playerRows;
 		} catch(e) {
