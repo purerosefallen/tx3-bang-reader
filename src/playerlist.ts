@@ -26,7 +26,7 @@ function getPlayerRowFromTree(tree: HTML.Tree): PlayerRow {
 		server: getString(nodes[3]),
 		level: getNumber(nodes[4]),
 		category: getString(nodes[5]),
-		region: getString(nodes[6], 7),
+		region: getString(nodes[6], 7) || "none",
 		score: getNumber(nodes[7]),
 		equip: getNumber(nodes[8]),
 		totalScore: getNumber(nodes[9])

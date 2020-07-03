@@ -70,7 +70,7 @@ export class Tx3Fetcher {
 				"  `serverArea` varchar(4) COLLATE utf8_unicode_ci NOT NULL,\n" +
 				"  `server` varchar(4) COLLATE utf8_unicode_ci NOT NULL,\n" +
 				"  `level` tinyint(4) UNSIGNED NOT NULL,\n" +
-				"  `region` varchar(7) COLLATE utf8_unicode_ci,\n" +
+				"  `region` varchar(7) COLLATE utf8_unicode_ci NOT NULL,\n" +
 				"  `score` int(11) UNSIGNED NOT NULL,\n" +
 				"  `equip` int(11) UNSIGNED NOT NULL,\n" +
 				"  `totalScore` int(11) UNSIGNED NOT NULL,\n" +
@@ -81,7 +81,8 @@ export class Tx3Fetcher {
 				"  INDEX (category(5)),\n" +
 				"  INDEX (serverArea(4)),\n" +
 				"  INDEX (server(4)),\n" +
-				"  INDEX (equip(11))\n" +
+				"  INDEX (region(7)),\n" +
+				"  INDEX (equip)\n" +
 				") ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci");
 			console.log(`Removing existing records of ${this.curDate}.`);
 			//await this.db.query("delete from userdata where date = ?", this.curDate);
