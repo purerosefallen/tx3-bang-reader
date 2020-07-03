@@ -74,7 +74,7 @@ export class Tx3Fetcher {
 				"  `score` int(11) UNSIGNED NOT NULL,\n" +
 				"  `equip` int(11) UNSIGNED NOT NULL,\n" +
 				"  `totalScore` int(11) UNSIGNED NOT NULL,\n" +
-				"  PRIMARY KEY (`id`)\n" +
+				"  PRIMARY KEY (`id`),\n" +
 				"  INDEX (date),\n" +
 				"  INDEX (name(7)),\n" +
 				"  INDEX (url(50)),\n" +
