@@ -21,12 +21,12 @@ function getPlayerRowFromTree(tree: HTML.Tree): PlayerRow {
 	return {
 		url: (nodes[1] as HTML.NodeTag).attrs.href as string,
 		rank: getNumber(nodes[0]),
-		name: getString(nodes[1]),
+		name: getString(nodes[1], 7),
 		serverArea: getString(nodes[2]),
 		server: getString(nodes[3]),
 		level: getNumber(nodes[4]),
 		category: getString(nodes[5]),
-		region: getString(nodes[6]),
+		region: getString(nodes[6], 7),
 		score: getNumber(nodes[7]),
 		equip: getNumber(nodes[8]),
 		totalScore: getNumber(nodes[9])

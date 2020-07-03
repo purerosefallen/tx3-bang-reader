@@ -90,7 +90,7 @@ export function findAllNodeIndexByTag(baseTree: HTML.Tree, tag: string, offset: 
 
 const chineseCapitalNumbers = ["零", "壹", "贰", "叁", "肆", "伍", "陆", "柒", "捌", "玖"]
 
-export function getString(node: HTML.Node) {
+export function getString(node: HTML.Node, lengthLimit?: number) {
 	let resultStr: string;
 	if (typeof (node) === "string") {
 		resultStr = node;
@@ -107,6 +107,9 @@ export function getString(node: HTML.Node) {
 		}
 	}
 	resultStr = resultStr.trim();
+	if (lengthLimit && resultStr.length > lengthLimit) {
+		resultStr = resultStr.slice(0, lengthLimit);
+	}
 	return resultStr;
 }
 
