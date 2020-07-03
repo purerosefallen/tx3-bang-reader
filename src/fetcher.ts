@@ -121,7 +121,7 @@ export class Tx3Fetcher {
 			resPromises.push(this.fetchListFromSchoolAndServer(school, server));
 		}
 		const result = _.flatten(await Promise.all(resPromises));
-		console.log(`Fetched user list with ${result.length} users from server ${server}.`);
+		console.log(`Fetched user list from server ${server}. ${result.length} users found.`);
 		return result;
 	}
 	async fetchListFromSchoolAndServer(school: number, server: string): Promise<PlayerRow[]> {
@@ -134,7 +134,9 @@ export class Tx3Fetcher {
 			}
 			res.push(list);
 		}
-		return _.flatten(res);
+		const ret = _.flatten(res);
+		console.log(`Fetched users from server ${server} with school ${school}.`);
+		return ret;
 	}
 	async fetchList(school: number, server: string, page: number): Promise<PlayerRow[]> {
 		console.log(`Fetching user list from server ${server} with school ${school} page ${page}.`);
@@ -153,7 +155,9 @@ export class Tx3Fetcher {
 				}
 			});
 			const playerRows = parsePlayerRows(content);
-			if(this.db) {
+			console.log(`Fetched user list from server ${server} with school ${school} page ${page}. ${playerRows.length} users found.`);
+			if (this.db) {
+				//await Promise.all(playerRows.map(m => this.db.query("delete from userdata where url = ? and date = ?", [m.url, this.curDate])));
 				await Promise.all(playerRows.map(m => this.db.query("insert into userdata set ?", {
 					date: this.curDate,
 					...m
