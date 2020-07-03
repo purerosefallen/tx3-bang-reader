@@ -149,11 +149,12 @@ export class Tx3Fetcher {
 				return;
 			}
 		}
-		console.log(`Player ${row.name} from ${row.server} has changes. Writing record to database.`);
-		await this.db.query("insert into userdata set ?", {
+		const sql = "insert into userdata set ?";
+		const valueObj = {
 			date: this.curDate,
 			...row
-		});
+		};
+		console.log(`Player ${row.name} from ${row.server} has changes. Writing record to database: ${sql} ${JSON.stringify(valueObj)} ${JSON.stringify(await this.db.query(sql, valueObj))}`);
 	}
 	async fetchList(school: number, server: string, page: number): Promise<PlayerRow[]> {
 		console.log(`Fetching user list from server ${server} with school ${school} page ${page}.`);
