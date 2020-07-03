@@ -75,8 +75,11 @@ export class Tx3Fetcher {
 				"  `equip` int(11) UNSIGNED NOT NULL,\n" +
 				"  `totalScore` int(11) UNSIGNED NOT NULL,\n" +
 				"  PRIMARY KEY (`id`)\n" +
-				"  INDEX [nameIndex] (name(7))\n" +
-				"  INDEX [urlIndex] (url(50))\n" +
+				"  INDEX (date),\n" +
+				"  INDEX (name(7)),\n" +
+				"  INDEX (url(50)),\n" +
+				"  INDEX (category(5)),\n" +
+				"  INDEX (serverArea(4), server(4)),\n" +
 				") ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci");
 			console.log(`Removing existing records of ${this.curDate}.`);
 			//await this.db.query("delete from userdata where date = ?", this.curDate);
