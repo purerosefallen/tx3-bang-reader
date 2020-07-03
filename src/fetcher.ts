@@ -80,7 +80,8 @@ export class Tx3Fetcher {
 				"  INDEX (url(50)),\n" +
 				"  INDEX (category(5)),\n" +
 				"  INDEX (serverArea(4)),\n" +
-				"  INDEX (server(4))\n" +
+				"  INDEX (server(4)),\n" +
+				"  INDEX (equip(11))\n" +
 				") ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci");
 			console.log(`Removing existing records of ${this.curDate}.`);
 			//await this.db.query("delete from userdata where date = ?", this.curDate);
