@@ -16,6 +16,10 @@ export interface PlayerRow {
 	totalScore: number;
 }
 
+export interface PlayerRowDated extends PlayerRow {
+	date: string;
+}
+
 function getPlayerRowFromTree(tree: HTML.Tree): PlayerRow {
 	const nodes = getContinuousNodes(tree, [1], 0, 2, 10);
 	return {
