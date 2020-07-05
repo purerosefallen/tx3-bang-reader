@@ -153,7 +153,7 @@ export class Tx3Fetcher {
 		const latestRows = await this.db.query("select url,rank,name,category,serverArea,server,level,region,score,equip,totalScore from userdata where url = ? order by date desc limit 1", row.url);
 		if (latestRows.length) {
 			const lrow = latestRows[0];
-			if (_.every(["name", "category", "serverArea", "server", "level", "region", "score", "equip", "totalScore"], field => lrow[field] === row[field])) {
+			if (_.every(["name", "category", "serverArea", "server", "level", "region"], field => lrow[field] === row[field])) {
 				return;
 			}
 		}
