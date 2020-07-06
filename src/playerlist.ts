@@ -20,6 +20,10 @@ export interface PlayerRowDated extends PlayerRow {
 	date: string;
 }
 
+export interface PlayerRowFull extends PlayerRowDated {
+	id: number;
+}
+
 function getPlayerRowFromTree(tree: HTML.Tree): PlayerRow {
 	const nodes = getContinuousNodes(tree, [1], 0, 2, 10);
 	return {
