@@ -10,13 +10,28 @@ variables:
 before_script:
   - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
 
-build:
+docker:
   stage: build
   tags: 
     - docker
   script:
     - docker build --pull -t $CONTAINER_TEST_IMAGE .
     - docker push $CONTAINER_TEST_IMAGE
+
+pack:
+  stage: build
+  image: node:buster-slim
+  tags:
+    - linux
+  dependencies: []
+  artifacts:
+    paths:
+      - dist/
+  script:
+    - apt update && apt -y install python3 build-essential
+    - npm ci
+    - npm run build
+    - npm run pack
 
 deploy_latest:
   stage: deploy
