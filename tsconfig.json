@@ -4,6 +4,7 @@
 		"module": "commonjs",
 		"target": "esnext",
 		"esModuleInterop": true,
+		"declaration": true,
 		"sourceMap": true
 	},
 	"compileOnSave": true,
